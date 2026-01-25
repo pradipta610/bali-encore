@@ -1,0 +1,191 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Bespoke experiential journeys through the soul of Bali. Adventure, Spirituality, Culture." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>{title} | Bali Encore</title>
+  </head>
+  <body class="antialiased">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/" class="header-logo font-serif text-2xl tracking-wide text-stone-50 transition-colors duration-300">
+            Bali Encore
+          </a>
+          
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-stone-50 transition-colors duration-300" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <div class="hidden lg:flex items-center space-x-10">
+            <a href="/philosophy" class="header-link text-xs uppercase tracking-widest font-medium text-stone-50/90 hover:text-stone-50 transition-colors duration-300">About</a>
+            <a href="/experiences" class="header-link text-xs uppercase tracking-widest font-medium text-stone-50/90 hover:text-stone-50 transition-colors duration-300">Journeys</a>
+            <a href="/journeys" class="header-link text-xs uppercase tracking-widest font-medium text-stone-50/90 hover:text-stone-50 transition-colors duration-300">Inspirations</a>
+            <a href="/destinations" class="header-link text-xs uppercase tracking-widest font-medium text-stone-50/90 hover:text-stone-50 transition-colors duration-300">Destinations</a>
+            <a href="/sustainability" class="header-link text-xs uppercase tracking-widest font-medium text-stone-50/90 hover:text-stone-50 transition-colors duration-300">Sustainability</a>
+            <a href="/begin" class="header-btn btn-secondary-light text-xs">Begin</a>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden pb-6">
+          <div class="flex flex-col space-y-4 pt-4 border-t border-stone-50/20">
+            <a href="/philosophy" class="header-link text-sm uppercase tracking-widest font-medium py-2 text-stone-50/90">About</a>
+            <a href="/experiences" class="header-link text-sm uppercase tracking-widest font-medium py-2 text-stone-50/90">Journeys</a>
+            <a href="/journeys" class="header-link text-sm uppercase tracking-widest font-medium py-2 text-stone-50/90">Inspirations</a>
+            <a href="/destinations" class="header-link text-sm uppercase tracking-widest font-medium py-2 text-stone-50/90">Destinations</a>
+            <a href="/sustainability" class="header-link text-sm uppercase tracking-widest font-medium py-2 text-stone-50/90">Sustainability</a>
+            <a href="/begin" class="header-btn btn-secondary-light text-sm text-center mt-4">Begin</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300">
+      <div class="max-w-7xl mx-auto section-padding">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div class="lg:col-span-2">
+            <h3 class="font-serif text-3xl text-stone-50 mb-6">Bali Encore</h3>
+            <p class="text-stone-400 leading-relaxed max-w-md mb-6">
+              A Boutique Travel Design House based in Ubud, dedicated to the evolution 
+              of business and human consciousness through luxury, sustainable, and soulful travel.
+            </p>
+            <div class="space-y-2 text-stone-400 text-sm">
+              <p><strong class="text-stone-300">Location:</strong> Ubud, Bali, Indonesia</p>
+              <p><strong class="text-stone-300">Speak with our Design Lead:</strong> Bagus Jnana</p>
+            </div>
+            <div class="divider mt-8"></div>
+          </div>
+          
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-stone-50 mb-6">Explore</h4>
+            <ul class="space-y-3">
+              <li><a href="/philosophy" class="text-stone-400 hover:text-stone-50 transition-colors">About Us</a></li>
+              <li><a href="/experiences" class="text-stone-400 hover:text-stone-50 transition-colors">The Journeys</a></li>
+              <li><a href="/journeys" class="text-stone-400 hover:text-stone-50 transition-colors">Sample Itineraries</a></li>
+              <li><a href="/destinations" class="text-stone-400 hover:text-stone-50 transition-colors">Destinations</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-stone-50 mb-6">Connect</h4>
+            <ul class="space-y-3">
+              <li><a href="/lifestyle" class="text-stone-400 hover:text-stone-50 transition-colors">Lifestyle</a></li>
+              <li><a href="/sustainability" class="text-stone-400 hover:text-stone-50 transition-colors">Sustainability & ESG</a></li>
+              <li><a href="/begin" class="text-stone-400 hover:text-stone-50 transition-colors">Begin Your Journey</a></li>
+            </ul>
+            <div class="mt-8">
+              <a href="/begin" class="btn-secondary-light text-xs">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-stone-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-stone-500 text-sm">
+            &copy; {new Date().getFullYear()} Bali Encore. All rights reserved.
+          </p>
+          <p class="text-stone-500 text-sm mt-4 md:mt-0">
+            Crafted with intention in Ubud, Bali
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Add js-enabled class to html for progressive enhancement
+      document.documentElement.classList.add('js-enabled');
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      // Header scroll behavior - transparent to solid
+      const initHeaderScroll = () => {
+        const header = document.getElementById('main-header');
+        if (!header) return;
+
+        const scrollThreshold = 50;
+
+        const updateHeader = () => {
+          if (window.scrollY > scrollThreshold) {
+            header.classList.add('header-scrolled');
+          } else {
+            header.classList.remove('header-scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader(); // Check initial state
+      };
+
+      // Scroll Reveal Animation System
+      // Uses IntersectionObserver for performant scroll-triggered animations
+      const initScrollReveal = () => {
+        const revealElements = document.querySelectorAll('.reveal, .reveal-scale, .reveal-stagger');
+        
+        if (!revealElements.length) return;
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -60px 0px',
+          threshold: 0.1
+        };
+
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+          revealOnScroll.observe(el);
+        });
+      };
+
+      // Initialize on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          initScrollReveal();
+          initHeaderScroll();
+        });
+      } else {
+        initScrollReveal();
+        initHeaderScroll();
+      }
+
+      // Re-initialize on page navigation (for Astro View Transitions)
+      document.addEventListener('astro:page-load', () => {
+        initScrollReveal();
+        initHeaderScroll();
+      });
+    </script>
+  </body>
+</html>
