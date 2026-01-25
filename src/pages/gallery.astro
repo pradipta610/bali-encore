@@ -1,0 +1,547 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const galleryImages = [
+  { src: '/images/nature/banyumala-waterfall.webp', alt: 'Banyumala Waterfall', category: 'nature' },
+  { src: '/images/nature/jungle-waterfall.webp', alt: 'Jungle Waterfall', category: 'nature' },
+  { src: '/images/nature/waterfall-couple.webp', alt: 'Waterfall Experience', category: 'nature' },
+  { src: '/images/nature/river-path.webp', alt: 'River Path', category: 'nature' },
+  { src: '/images/nature/rice-terrace.webp', alt: 'Rice Terrace', category: 'nature' },
+  { src: '/images/nature/landscape-01.webp', alt: 'Bali Landscape', category: 'nature' },
+  { src: '/images/nature/nature-scene.webp', alt: 'Nature Scene', category: 'nature' },
+  { src: '/images/nature/nature-06.webp', alt: 'Bali Nature', category: 'nature' },
+  { src: '/images/hero/lempuyang-gate.webp', alt: 'Lempuyang Gate', category: 'temples' },
+  { src: '/images/temples/gunung-kawi.webp', alt: 'Gunung Kawi', category: 'temples' },
+  { src: '/images/temples/temple-gate.webp', alt: 'Temple Gate', category: 'temples' },
+  { src: '/images/temples/village-shrine.webp', alt: 'Village Shrine', category: 'temples' },
+  { src: '/images/temples/temple-scene.webp', alt: 'Temple Scene', category: 'temples' },
+  { src: '/images/temples/temple-02.webp', alt: 'Balinese Temple', category: 'temples' },
+  { src: '/images/wellness/jungle-pool.webp', alt: 'Jungle Pool', category: 'temples' },
+  { src: '/images/wellness/riverside-pavilion.webp', alt: 'Riverside Pavilion', category: 'temples' },
+  { src: '/images/culture/tirta-gangga.webp', alt: 'Tirta Gangga', category: 'culture' },
+  { src: '/images/culture/offerings.webp', alt: 'Balinese Offerings', category: 'culture' },
+  { src: '/images/culture/artisan-masks.webp', alt: 'Artisan Masks', category: 'culture' },
+  { src: '/images/culture/offerings-2.webp', alt: 'Traditional Offerings', category: 'culture' },
+  { src: '/images/culture/culture-04.webp', alt: 'Balinese Culture', category: 'culture' },
+  { src: '/images/culture/culture-05.webp', alt: 'Cultural Experience', category: 'culture' },
+  { src: '/images/culture/culture-06.webp', alt: 'Balinese Tradition', category: 'culture' },
+  { src: '/images/culture/culture-13.webp', alt: 'Cultural Heritage', category: 'culture' },
+  { src: '/images/adventure/forest-trek.webp', alt: 'Forest Trek', category: 'adventure' },
+  { src: '/images/adventure/banyan-tree-walk.webp', alt: 'Banyan Tree Walk', category: 'adventure' },
+  { src: '/images/adventure/jungle-descent.webp', alt: 'Jungle Descent', category: 'adventure' },
+  { src: '/images/adventure/forest-walk.webp', alt: 'Forest Walk', category: 'adventure' },
+  { src: '/images/adventure/nature-trail.webp', alt: 'Nature Trail', category: 'adventure' },
+  { src: '/images/beach/uluwatu-beach.webp', alt: 'Uluwatu Beach', category: 'adventure' },
+  { src: '/images/beach/rocky-coast.webp', alt: 'Rocky Coast', category: 'adventure' },
+  { src: '/images/beach/beach-panorama.webp', alt: 'Beach Panorama', category: 'adventure' },
+];
+
+const natureImages = galleryImages.filter(img => img.category === 'nature');
+const templesImages = galleryImages.filter(img => img.category === 'temples');
+const cultureImages = galleryImages.filter(img => img.category === 'culture');
+const adventureImages = galleryImages.filter(img => img.category === 'adventure');
+---
+
+<Layout title="Gallery" description="Explore the beauty of Bali through our curated collection of images from authentic journeys across the island.">
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-100 hidden bg-black/95 backdrop-blur-sm">
+    <button id="lightbox-close" class="absolute top-6 right-6 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Close">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Previous">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Next">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    
+    <div class="flex items-center justify-center w-full h-full p-4 md:p-12">
+      <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+    </div>
+    
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+      <span id="lightbox-counter"></span>
+    </div>
+  </div>
+
+  <!-- Video Lightbox Modal -->
+  <div id="video-lightbox" class="fixed inset-0 z-100 hidden bg-black/95 backdrop-blur-sm">
+    <button id="video-lightbox-close" class="absolute top-6 right-6 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Close">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <button id="video-lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Previous">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    
+    <button id="video-lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Next">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    
+    <div class="flex items-center justify-center w-full h-full p-4 md:p-12">
+      <video id="video-lightbox-player" class="max-w-full max-h-full" controls playsinline>
+        <source id="video-lightbox-source" src="" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+      <span id="video-lightbox-counter"></span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative h-[50vh] flex items-center justify-center bg-stone-900 overflow-hidden">
+    <div class="absolute inset-0 bg-linear-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80 z-10"></div>
+    <div class="absolute inset-0 bg-[url('/images/hero/hero-landscape.webp')] bg-cover bg-center"></div>
+    
+    <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
+      <p class="hero-animate text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Visual Stories</p>
+      <h1 class="hero-animate hero-animate-delay-1 font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 leading-tight">
+        Gallery
+      </h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding bg-stone-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="reveal">
+        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">Moments from the Journey</p>
+        <div class="divider divider-center mb-12"></div>
+      </div>
+      <div class="prose-luxury reveal">
+        <p>
+          Every image tells a story of authentic Bali—the sacred temples, lush jungles, 
+          pristine waterfalls, and the warm smiles of our guests discovering the island's soul.
+          <br><span class="text-stone-500 text-sm">Click any image to view full size and navigate through the gallery.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Section -->
+  <section class="section-padding bg-stone-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">Bhur — The Earth</p>
+        <h2 class="font-serif text-3xl text-stone-900">Nature & Landscapes</h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal-stagger">
+        {natureImages.map((img, index) => (
+          <button 
+            class="gallery-item aspect-square overflow-hidden group cursor-pointer border-0 p-0 bg-transparent"
+            data-index={index}
+            data-category="nature"
+            data-src={img.src}
+            data-alt={img.alt}
+          >
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Temples & Spirituality Section -->
+  <section class="section-padding bg-stone-900 text-stone-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-4">Swah — The Spirit</p>
+        <h2 class="font-serif text-3xl text-stone-50">Temples & Sacred Spaces</h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal-stagger">
+        {templesImages.map((img, index) => (
+          <button 
+            class="gallery-item aspect-square overflow-hidden group cursor-pointer border-0 p-0 bg-transparent"
+            data-index={index}
+            data-category="temples"
+            data-src={img.src}
+            data-alt={img.alt}
+          >
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture Section -->
+  <section class="section-padding bg-stone-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">Bwah — Humanity</p>
+        <h2 class="font-serif text-3xl text-stone-900">Culture & Traditions</h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal-stagger">
+        {cultureImages.map((img, index) => (
+          <button 
+            class="gallery-item aspect-square overflow-hidden group cursor-pointer border-0 p-0 bg-transparent"
+            data-index={index}
+            data-category="culture"
+            data-src={img.src}
+            data-alt={img.alt}
+          >
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Adventure Section -->
+  <section class="section-padding bg-stone-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">Exploration</p>
+        <h2 class="font-serif text-3xl text-stone-900">Adventure & Discovery</h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal-stagger">
+        {adventureImages.map((img, index) => (
+          <button 
+            class="gallery-item aspect-square overflow-hidden group cursor-pointer border-0 p-0 bg-transparent"
+            data-index={index}
+            data-category="adventure"
+            data-src={img.src}
+            data-alt={img.alt}
+          >
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="section-padding bg-stone-900 text-stone-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Moving Stories</p>
+        <div class="divider divider-center mb-12"></div>
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-50 mb-6">
+          Video Moments
+        </h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">
+          Experience the rhythm of Bali through our video collection—capturing the essence 
+          of authentic journeys across the island. Click to play.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 reveal-stagger">
+        <button 
+          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
+          data-video-src="/images/videos/video-02.MOV"
+          data-index="0"
+        >
+          <img src="/images/nature/banyumala-waterfall.webp" alt="Video 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button 
+          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
+          data-video-src="/images/videos/video-07.MOV"
+          data-index="1"
+        >
+          <img src="/images/wellness/jungle-pool.webp" alt="Video 2" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button 
+          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
+          data-video-src="/images/videos/video-03.MOV"
+          data-index="2"
+        >
+          <img src="/images/adventure/forest-trek.webp" alt="Video 3" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button 
+          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
+          data-video-src="/images/videos/video-05.MOV"
+          data-index="3"
+        >
+          <img src="/images/temples/gunung-kawi.webp" alt="Video 4" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero/hero-nature.webp')] bg-cover bg-center bg-fixed"></div>
+    <div class="absolute inset-0 bg-stone-900/70"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 reveal">
+      <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Create Your Own Story</p>
+      <div class="divider divider-center mb-12"></div>
+      <h2 class="font-serif text-4xl md:text-5xl text-stone-50 mb-8">
+        Your Journey Awaits
+      </h2>
+      <p class="text-stone-300 text-lg max-w-2xl mx-auto mb-12">
+        These moments could be yours. Let us design a bespoke journey 
+        that creates memories to last a lifetime.
+      </p>
+      <a href="/begin" class="btn-luxury-outline">Begin Your Journey</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .gallery-item {
+    position: relative;
+  }
+  
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .gallery-item:hover::after {
+    opacity: 1;
+  }
+
+  #lightbox {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #lightbox.active {
+    opacity: 1;
+  }
+
+  #lightbox-image {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  #lightbox.active #lightbox-image {
+    transform: scale(1);
+  }
+
+  #video-lightbox {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #video-lightbox.active {
+    opacity: 1;
+  }
+
+  #video-lightbox-player {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  #video-lightbox.active #video-lightbox-player {
+    transform: scale(1);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Gallery Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement;
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    let currentImages: { src: string; alt: string }[] = [];
+    let currentIndex = 0;
+
+    function openLightbox(category: string, index: number) {
+      const categoryItems = document.querySelectorAll(`.gallery-item[data-category="${category}"]`);
+      currentImages = Array.from(categoryItems).map(item => ({
+        src: item.getAttribute('data-src') || '',
+        alt: item.getAttribute('data-alt') || ''
+      }));
+      currentIndex = index;
+      updateLightboxImage();
+      lightbox?.classList.remove('hidden');
+      setTimeout(() => lightbox?.classList.add('active'), 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox?.classList.remove('active');
+      setTimeout(() => {
+        lightbox?.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    function updateLightboxImage() {
+      if (lightboxImage && currentImages[currentIndex]) {
+        lightboxImage.src = currentImages[currentIndex].src;
+        lightboxImage.alt = currentImages[currentIndex].alt;
+      }
+      if (lightboxCounter) {
+        lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      }
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      updateLightboxImage();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      updateLightboxImage();
+    }
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const category = item.getAttribute('data-category') || '';
+        const index = parseInt(item.getAttribute('data-index') || '0');
+        openLightbox(category, index);
+      });
+    });
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightboxNext?.addEventListener('click', nextImage);
+    lightboxPrev?.addEventListener('click', prevImage);
+
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox?.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+      }
+    });
+
+    // Video Lightbox
+    const videoLightbox = document.getElementById('video-lightbox');
+    const videoPlayer = document.getElementById('video-lightbox-player') as HTMLVideoElement;
+    const videoSource = document.getElementById('video-lightbox-source') as HTMLSourceElement;
+    const videoLightboxClose = document.getElementById('video-lightbox-close');
+    const videoLightboxPrev = document.getElementById('video-lightbox-prev');
+    const videoLightboxNext = document.getElementById('video-lightbox-next');
+    const videoLightboxCounter = document.getElementById('video-lightbox-counter');
+    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+    
+    const videoSources = [
+      '/images/videos/video-02.MOV',
+      '/images/videos/video-07.MOV',
+      '/images/videos/video-03.MOV',
+      '/images/videos/video-05.MOV'
+    ];
+    let currentVideoIndex = 0;
+
+    function openVideoLightbox(index: number) {
+      currentVideoIndex = index;
+      updateVideoLightbox();
+      videoLightbox?.classList.remove('hidden');
+      setTimeout(() => videoLightbox?.classList.add('active'), 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoLightbox() {
+      if (videoPlayer) {
+        videoPlayer.pause();
+      }
+      videoLightbox?.classList.remove('active');
+      setTimeout(() => {
+        videoLightbox?.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    function updateVideoLightbox() {
+      if (videoSource && videoPlayer) {
+        videoSource.src = videoSources[currentVideoIndex];
+        videoPlayer.load();
+        videoPlayer.play();
+      }
+      if (videoLightboxCounter) {
+        videoLightboxCounter.textContent = `${currentVideoIndex + 1} / ${videoSources.length}`;
+      }
+    }
+
+    function nextVideo() {
+      if (videoPlayer) videoPlayer.pause();
+      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+      updateVideoLightbox();
+    }
+
+    function prevVideo() {
+      if (videoPlayer) videoPlayer.pause();
+      currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
+      updateVideoLightbox();
+    }
+
+    videoThumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const index = parseInt(thumb.getAttribute('data-index') || '0');
+        openVideoLightbox(index);
+      });
+    });
+
+    videoLightboxClose?.addEventListener('click', closeVideoLightbox);
+    videoLightboxNext?.addEventListener('click', nextVideo);
+    videoLightboxPrev?.addEventListener('click', prevVideo);
+
+    videoLightbox?.addEventListener('click', (e) => {
+      if (e.target === videoLightbox) closeVideoLightbox();
+    });
+
+    // Update keyboard handler for both lightboxes
+    document.addEventListener('keydown', (e) => {
+      if (!videoLightbox?.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeVideoLightbox();
+        if (e.key === 'ArrowRight') nextVideo();
+        if (e.key === 'ArrowLeft') prevVideo();
+      }
+    });
+  });
+</script>
