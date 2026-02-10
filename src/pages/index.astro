@@ -3,27 +3,74 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center bg-stone-900 overflow-hidden">
-    <div class="absolute inset-0 bg-linear-to-b from-stone-900/70 via-stone-900/50 to-stone-900/80 z-10"></div>
-    <div class="absolute inset-0 bg-[url('/images/hero/lempuyang-gate.webp')] bg-cover bg-center"></div>
-    
-    <div class="relative z-20 text-center px-6 max-w-5xl mx-auto">
-      <p class="hero-animate text-gold-500 text-xs uppercase tracking-[0.3em] mb-8">Boutique Travel Design House</p>
-      <h1 class="hero-animate hero-animate-delay-1 font-serif text-5xl md:text-7xl lg:text-8xl text-stone-50 leading-tight mb-8 text-balance">
-        A Return to the Island<br/>— and to Yourself
-      </h1>
-      <p class="hero-animate hero-animate-delay-2 text-stone-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-        Bespoke journeys through Bali's nature, culture, and spiritual wisdom, 
-        curated for those who seek depth beyond the ordinary.
-      </p>
-      <div class="hero-animate hero-animate-delay-3">
-        <a href="/begin" class="btn-luxury-outline">Begin Your Journey</a>
+  <!-- Hero Slideshow — Multiple images with crossfade + text transitions -->
+  <section id="hero-slideshow" class="home-hero relative h-screen overflow-hidden bg-stone-900">
+    <div class="absolute inset-0 home-hero-overlay z-10"></div>
+
+    <!-- Slide backgrounds -->
+    <div class="hero-slide-bg hero-slide-bg-active absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1532186773960-85649e5cb70b?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=2400&q=80')"></div>
+
+    <!-- Slide text content -->
+    <div class="relative z-20 h-full flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-16 md:pb-24">
+      <div class="max-w-3xl">
+        <!-- Slide 0: Bhur -->
+        <div class="hero-slide-text hero-slide-text-active" data-slide="0">
+          <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-4 hero-word">Pillar I — Bhur</p>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-stone-50 leading-[1.1] mb-0">
+            <span class="hero-word">The</span>
+            <span class="hero-word hero-word-em">Untamed</span>
+            <span class="hero-word">Archipelago</span>
+          </h1>
+        </div>
+        <!-- Slide 1: Bwah -->
+        <div class="hero-slide-text" data-slide="1">
+          <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-4 hero-word">Pillar II — Bwah</p>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-stone-50 leading-[1.1] mb-0">
+            <span class="hero-word">The</span>
+            <span class="hero-word hero-word-em">Ancestral</span>
+            <span class="hero-word">Trail</span>
+          </h1>
+        </div>
+        <!-- Slide 2: Swah -->
+        <div class="hero-slide-text" data-slide="2">
+          <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-4 hero-word">Pillar III — Swah</p>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-stone-50 leading-[1.1] mb-0">
+            <span class="hero-word">The</span>
+            <span class="hero-word hero-word-em">Path</span>
+            <span class="hero-word">of</span>
+            <span class="hero-word">Awakening</span>
+          </h1>
+        </div>
+
+        <!-- CTA — always visible -->
+        <div class="hero-cta mt-8">
+          <a href="/begin" class="inline-flex items-center gap-3 group text-stone-50/80 hover:text-stone-50 transition-colors duration-500">
+            <span class="w-12 h-12 border border-stone-50/30 group-hover:border-stone-50/60 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7v10"></path>
+              </svg>
+            </span>
+            <span class="text-xs uppercase tracking-[0.2em] font-medium">Begin your journey</span>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 hero-animate hero-animate-delay-3">
-      <div class="w-px h-16 bg-linear-to-b from-transparent via-stone-400 to-transparent"></div>
+    <!-- Slide counter -->
+    <div class="absolute bottom-8 right-8 md:right-16 lg:right-24 z-20 flex flex-col items-end gap-6">
+      <div class="hero-counter flex items-center gap-3">
+        <span id="hero-current" class="font-serif text-lg text-stone-50">01</span>
+        <span class="w-8 h-px bg-stone-50/40"></span>
+        <span class="font-serif text-lg text-stone-50/40">03</span>
+      </div>
+      <p class="text-stone-50/30 text-[10px] uppercase tracking-[0.3em] writing-vertical">Scroll to explore</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="absolute bottom-0 left-0 right-0 z-30 h-[2px] bg-stone-50/10">
+      <div id="hero-progress" class="h-full bg-gold-500/60 w-0"></div>
     </div>
   </section>
 
@@ -79,6 +126,53 @@ import Layout from '../layouts/Layout.astro';
         <p>
           We believe that meaningful travel can regenerate—not consume—the places we visit.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Founder's Voice -->
+  <section class="py-24 md:py-40 px-8 md:px-16 lg:px-24 bg-stone-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <!-- Image -->
+        <div class="reveal-scale">
+          <div class="relative aspect-4/5 overflow-hidden">
+            <img src="/images/gallery/gallery-101.webp" alt="Bagus Jnana, Founder of Bali Encore" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/30 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="reveal">
+          <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em] mb-6">The Founder's Voice</p>
+          <div class="w-12 h-px bg-gold-500 mb-10"></div>
+
+          <div class="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              "Bali Encore was born from a simple realization: the true soul of Bali is often 
+              hidden behind the noise of modern tourism. Having grown up immersed in our traditions, 
+              I wanted to create a service that acts as a bridge—connecting the discerning global 
+              traveler with the raw, dignified, and spiritual heart of my home.
+            </p>
+            <p>
+              As your Private Concierge, my team and I don't just plan trips; we manage your 
+              relationship with the island. We believe in the 'Evolution of Consciousness' through 
+              travel—ensuring that every moment you spend here is seamless, sustainable, and 
+              deeply resonant.
+            </p>
+            <p class="font-serif text-xl md:text-2xl text-stone-800 italic leading-relaxed">
+              Welcome to your Encore."
+            </p>
+          </div>
+
+          <div class="mt-10 flex items-center gap-4">
+            <div class="w-12 h-px bg-gold-500"></div>
+            <div>
+              <p class="font-serif text-lg text-stone-900">Bagus Jnana</p>
+              <p class="text-stone-500 text-xs uppercase tracking-[0.2em]">Founder & Private Concierge</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -228,44 +322,48 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Founder Section -->
-  <section class="section-padding bg-stone-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="reveal">
-          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">The Founder's Dharma</p>
-          <div class="divider mb-8"></div>
-          <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-8">
-            A Message from Bagus Jnana
-          </h2>
-          <div class="prose-luxury">
-            <p class="text-xl italic text-stone-700 mb-6">
-              "Growing up in Ubud, I learned that Bali's beauty isn't just in its landscapes, 
-              but in the balance we maintain every day."
-            </p>
-            <p>
-              I created Bali Encore because I want to share the 'Real Bali'—the one that exists 
-              beyond the camera lens. When you journey with us, you are not just a visitor; 
-              you are a guest of my culture.
-            </p>
-            <p>
-              I personally ensure that every ritual we share and every path we walk is done 
-              with respect, authenticity, and a commitment to our island's future.
-            </p>
-            <p class="font-medium text-stone-800">
-              I look forward to welcoming you home.
-            </p>
-          </div>
-        </div>
-        <div class="relative h-125 reveal-scale image-reveal">
-          <div class="absolute inset-0 bg-[url('/images/culture/tirta-gangga.webp')] bg-cover bg-center"></div>
+  <!-- Founder's Dharma — Cinematic Quote -->
+  <section class="relative py-32 md:py-48 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/culture/tirta-gangga.webp')] bg-cover bg-center bg-fixed"></div>
+    <div class="absolute inset-0 bg-stone-900/65"></div>
+    
+    <div class="relative z-10 px-8 md:px-16 lg:px-24">
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-8">The Founder's Dharma</p>
+        <div class="w-12 h-px bg-gold-500 mx-auto mb-12"></div>
+        
+        <blockquote class="font-serif text-2xl md:text-4xl lg:text-5xl text-stone-50 leading-[1.25] mb-10">
+          "Growing up in Ubud, I learned that Bali's beauty isn't just in its landscapes, 
+          but in the balance we maintain every day."
+        </blockquote>
+        
+        <p class="text-stone-300/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-12">
+          When you journey with us, you are not just a visitor — you are a guest of my culture. 
+          Every ritual we share and every path we walk is done with respect, authenticity, 
+          and a commitment to our island's future.
+        </p>
+
+        <div class="flex items-center justify-center gap-4">
+          <div class="w-12 h-px bg-gold-500"></div>
+          <p class="font-serif text-lg text-gold-400">Bagus Jnana</p>
+          <div class="w-12 h-px bg-gold-500"></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Breathing space between dark sections -->
+  <section class="py-24 md:py-32 px-8 md:px-16 lg:px-24 bg-stone-50">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <p class="font-serif text-3xl md:text-4xl text-stone-900 leading-relaxed">
+        Every journey begins with a single 
+        <em class="text-gold-600">conversation</em>
+      </p>
+    </div>
+  </section>
+
   <!-- Final Call to Action -->
-  <section class="relative py-24 md:py-32 overflow-hidden">
+  <section class="relative py-32 md:py-44 overflow-hidden">
     <div class="absolute inset-0 bg-[url('/images/temples/gunung-kawi.webp')] bg-cover bg-center bg-fixed"></div>
     <div class="absolute inset-0 bg-stone-900/70"></div>
     
@@ -283,3 +381,152 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
+
+<style>
+  /* ===== HERO SLIDESHOW ===== */
+  .home-hero-overlay {
+    background: linear-gradient(
+      to top right,
+      rgba(28, 25, 23, 0.75) 0%,
+      rgba(28, 25, 23, 0.35) 40%,
+      rgba(28, 25, 23, 0.1) 100%
+    );
+  }
+
+  .hero-slide-bg {
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 8s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .hero-slide-bg-active {
+    opacity: 1;
+    transform: scale(1);
+    animation: heroSlideZoom 8s ease-out forwards;
+  }
+
+  @keyframes heroSlideZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+
+  .hero-slide-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  .hero-slide-text-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+  }
+
+  .hero-slide-text-active .hero-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: wordReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-word { display: inline-block; }
+
+  .hero-word-em {
+    font-style: italic;
+    color: var(--color-gold-400);
+  }
+
+  .hero-slide-text-active .hero-word:nth-child(1) { animation-delay: 0.1s; }
+  .hero-slide-text-active .hero-word:nth-child(2) { animation-delay: 0.2s; }
+  .hero-slide-text-active .hero-word:nth-child(3) { animation-delay: 0.3s; }
+  .hero-slide-text-active .hero-word:nth-child(4) { animation-delay: 0.4s; }
+  .hero-slide-text-active .hero-word:nth-child(5) { animation-delay: 0.5s; }
+  .hero-slide-text-active .hero-word:nth-child(6) { animation-delay: 0.6s; }
+  .hero-slide-text-active .hero-word:nth-child(7) { animation-delay: 0.7s; }
+
+  @keyframes wordReveal {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-cta {
+    opacity: 0;
+    animation: heroCTAIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+  }
+
+  @keyframes heroCTAIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-counter {
+    opacity: 0;
+    animation: heroCTAIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards;
+  }
+
+  #hero-progress {
+    transition: width 0.3s linear;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ===== HERO SLIDESHOW =====
+    const slideBgs = document.querySelectorAll('.hero-slide-bg');
+    const slideTexts = document.querySelectorAll('.hero-slide-text');
+    const heroCounter = document.getElementById('hero-current');
+    const heroProgress = document.getElementById('hero-progress');
+    const totalSlides = slideBgs.length;
+    let currentSlide = 0;
+    const slideDuration = 6000;
+    let slideTimer: ReturnType<typeof setInterval>;
+    let progressStart: number;
+    let progressRAF: number;
+
+    function updateProgress() {
+      const elapsed = Date.now() - progressStart;
+      const pct = Math.min((elapsed / slideDuration) * 100, 100);
+      if (heroProgress) heroProgress.style.width = pct + '%';
+      if (pct < 100) {
+        progressRAF = requestAnimationFrame(updateProgress);
+      }
+    }
+
+    function goToSlide(index: number) {
+      slideBgs[currentSlide]?.classList.remove('hero-slide-bg-active');
+      slideTexts[currentSlide]?.classList.remove('hero-slide-text-active');
+
+      currentSlide = index % totalSlides;
+
+      slideBgs[currentSlide]?.classList.add('hero-slide-bg-active');
+      slideTexts[currentSlide]?.classList.add('hero-slide-text-active');
+
+      if (heroCounter) heroCounter.textContent = String(currentSlide + 1).padStart(2, '0');
+
+      cancelAnimationFrame(progressRAF);
+      progressStart = Date.now();
+      updateProgress();
+    }
+
+    function startSlideshow() {
+      progressStart = Date.now();
+      updateProgress();
+      slideTimer = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, slideDuration);
+    }
+
+    if (totalSlides > 0) startSlideshow();
+  });
+</script>
