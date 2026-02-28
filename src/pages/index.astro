@@ -8,9 +8,9 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 home-hero-overlay z-10"></div>
 
     <!-- Slide backgrounds -->
-    <div class="hero-slide-bg hero-slide-bg-active absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2400&q=80')"></div>
-    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1532186773960-85649e5cb70b?auto=format&fit=crop&w=2400&q=80')"></div>
-    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero-slide-bg hero-slide-bg-active absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=2400&q=80')"></div>
+    <div class="hero-slide-bg absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=2400&q=80')"></div>
 
     <!-- Slide text content -->
     <div class="relative z-20 h-full flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-16 md:pb-24">
@@ -69,315 +69,316 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Progress bar -->
-    <div class="absolute bottom-0 left-0 right-0 z-30 h-[2px] bg-stone-50/10">
+    <div class="absolute bottom-0 left-0 right-0 z-30 h-0.5 bg-stone-50/10">
       <div id="hero-progress" class="h-full bg-gold-500/60 w-0"></div>
     </div>
   </section>
 
   <!-- What is Bali Encore -->
-  <section class="section-padding bg-stone-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal">
-        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">What is Bali Encore?</p>
-        <div class="divider divider-center mb-12"></div>
+  <section class="section-padding bg-stone-50 relative overflow-hidden">
+    <!-- Decorative background element -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-200 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block py-1 px-3 border border-gold-500/30 rounded-full text-gold-600 text-[10px] uppercase tracking-[0.2em] mb-6">The Essence</span>
+        <h2 class="font-serif text-5xl md:text-6xl text-stone-900 leading-[1.1] mb-8">
+          The Art of the <br/><span class="italic text-gold-600">Meaningful Return</span>
+        </h2>
       </div>
       
-      <h2 class="reveal font-serif text-4xl md:text-5xl text-stone-900 mb-12 leading-tight">
-        The Art of the Meaningful Return
-      </h2>
-      
-      <div class="reveal prose-luxury max-w-3xl mx-auto text-left md:text-center">
-        <p>
-          Bali Encore is a bespoke travel design house based in Ubud, founded on the conviction 
-          that travel should be a transformative force—one that elevates the guest while honoring 
-          the sanctity of the destination.
-        </p>
-        <p>
-          We do not offer fixed itineraries or mass tourism experiences. Instead, we design 
-          tailor-made journeys for travelers who have been to Bali before—yet feel there is 
-          still something deeper to discover.
-        </p>
-        <p>
-          At Bali Encore, travel is not about ticking destinations. It is about alignment—with 
-          the land, the culture, and your own rhythm.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Bali Encore Exists -->
-  <section class="section-padding bg-stone-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal">
-        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">Why We Exist</p>
-        <div class="divider divider-center mb-12"></div>
-      </div>
-      
-      <div class="reveal prose-luxury max-w-3xl mx-auto text-left md:text-center">
-        <p class="text-xl md:text-2xl font-serif text-stone-800 mb-8 leading-relaxed">
-          Before temples became landmarks and beaches became icons, Bali was—and still is—a 
-          living island shaped by fire, water, ritual, and community.
-        </p>
-        <p>
-          As Bali faces the pressures of modern tourism, Bali Encore was created with a clear 
-          intention: to honor what is sacred, protect what is fragile, and invite travelers 
-          to experience Bali with respect and awareness.
-        </p>
-        <p>
-          We believe that meaningful travel can regenerate—not consume—the places we visit.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Founder's Voice -->
-  <section class="py-24 md:py-40 px-8 md:px-16 lg:px-24 bg-stone-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <!-- Image -->
-        <div class="reveal-scale">
-          <div class="relative aspect-4/5 overflow-hidden">
-            <img src="/images/gallery/gallery-101.webp" alt="Bagus Jnana, Founder of Bali Encore" class="w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/30 to-transparent"></div>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start reveal-stagger">
+        <div class="prose-luxury text-stone-600">
+          <p class="text-lg leading-relaxed">
+            Bali Encore is a bespoke travel design house based in Ubud, founded on the conviction 
+            that travel should be a transformative force—one that elevates the guest while honoring 
+            the sanctity of the destination.
+          </p>
         </div>
+        <div class="prose-luxury text-stone-600">
+          <p class="mb-6">
+            We do not offer fixed itineraries or mass tourism experiences. Instead, we design 
+            tailor-made journeys for travelers who have been to Bali before—yet feel there is 
+            still something deeper to discover.
+          </p>
+          <p class="font-serif text-xl text-stone-800 italic">
+            Travel is not about ticking destinations. It is about alignment.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12 reveal">
+        <a href="/philosophy" class="inline-flex items-center gap-3 px-8 py-4 border border-stone-300 hover:border-gold-500 text-stone-700 hover:text-gold-600 text-xs uppercase tracking-widest transition-all duration-300 group">
+          <span>Discover Our Philosophy</span>
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Text -->
-        <div class="reveal">
-          <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em] mb-6">The Founder's Voice</p>
-          <div class="w-12 h-px bg-gold-500 mb-10"></div>
-
-          <div class="space-y-6 text-stone-600 leading-relaxed">
+  <!-- Why Bali Encore Exists - Dark Section for Contrast -->
+  <section class="py-24 md:py-32 bg-stone-900 text-stone-50 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 reveal">
+          <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-8">Our Purpose</p>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-8">
+            Honoring the <span class="text-gold-400 italic">Sacred</span>,<br/>
+            Protecting the <span class="text-gold-400 italic">Fragile</span>
+          </h2>
+          <div class="w-20 h-px bg-gold-500/50 mb-8"></div>
+        </div>
+        
+        <div class="lg:col-span-7 reveal">
+          <p class="text-xl md:text-2xl font-serif text-stone-200 mb-8 leading-relaxed">
+            Before temples became landmarks and beaches became icons, Bali was—and still is—a 
+            living island shaped by fire, water, ritual, and community.
+          </p>
+          <div class="space-y-6 text-stone-400 leading-relaxed">
             <p>
-              "Bali Encore was born from a simple realization: the true soul of Bali is often 
-              hidden behind the noise of modern tourism. Having grown up immersed in our traditions, 
-              I wanted to create a service that acts as a bridge—connecting the discerning global 
-              traveler with the raw, dignified, and spiritual heart of my home.
+              As Bali faces the pressures of modern tourism, Bali Encore was created with a clear 
+              intention: to invite travelers to experience Bali with respect and awareness.
             </p>
             <p>
-              As your Private Concierge, my team and I don't just plan trips; we manage your 
+              We believe that meaningful travel can regenerate—not consume—the places we visit.
+            </p>
+          </div>
+          <a href="/journeys" class="inline-flex items-center gap-3 mt-10 group">
+            <span class="w-10 h-10 border border-gold-500/50 group-hover:border-gold-400 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </span>
+            <span class="text-stone-300 text-xs uppercase tracking-widest group-hover:text-gold-400 transition-colors">Explore Our Journeys</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Founder's Voice - Cinematic Background -->
+  <section class="relative py-32 md:py-40 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2400&q=80')] bg-cover bg-center bg-fixed"></div>
+    <div class="absolute inset-0 bg-stone-900/75"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+      <div class="text-center reveal">
+        <div class="inline-flex items-center gap-4 mb-10 opacity-80">
+          <div class="w-8 h-px bg-gold-400"></div>
+          <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em]">The Founder's Voice</p>
+          <div class="w-8 h-px bg-gold-400"></div>
+        </div>
+        
+        <div class="relative">
+          <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-8xl font-serif text-stone-50/10 -z-10 select-none">"</span>
+          
+          <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-50 mb-10 leading-tight">
+            Bali Encore was born from a simple realization
+          </h3>
+          
+          <div class="space-y-6 text-stone-300 leading-relaxed text-lg max-w-3xl mx-auto">
+            <p>
+              The true soul of Bali is often hidden behind the noise of modern tourism. 
+              We wanted to create a service that acts as a bridge—connecting the discerning global 
+              traveler with the raw, dignified, and spiritual heart of this island.
+            </p>
+            <p>
+              As your Private Concierge, we don't just plan trips; we manage your 
               relationship with the island. We believe in the 'Evolution of Consciousness' through 
               travel—ensuring that every moment you spend here is seamless, sustainable, and 
               deeply resonant.
             </p>
-            <p class="font-serif text-xl md:text-2xl text-stone-800 italic leading-relaxed">
-              Welcome to your Encore."
+          </div>
+          
+          <div class="mt-12">
+            <p class="font-serif text-2xl md:text-3xl text-stone-50 italic mb-6">Welcome to your Encore.</p>
+            <div class="h-px w-16 bg-gold-500 mx-auto mb-6"></div>
+            <p class="text-stone-400 text-xs uppercase tracking-[0.2em]">— Bagus Jnana</p>
+          </div>
+          
+          <a href="/philosophy" class="inline-flex items-center gap-3 mt-10 px-8 py-4 border border-stone-50/30 hover:border-gold-500 text-stone-50 hover:text-gold-400 text-xs uppercase tracking-widest transition-all duration-300 group">
+            <span>Learn More About Us</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Differentiates Us - Elegant List -->
+  <section class="py-24 bg-white border-y border-stone-100">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="reveal mb-16">
+        <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em] mb-6">Our Distinction</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-6">What Differentiates Us</h2>
+        <div class="w-px h-12 bg-gold-500/30 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 text-left reveal-stagger">
+        <!-- Item 1 -->
+        <div class="flex gap-6 group">
+          <span class="font-serif text-2xl text-gold-500 italic">01</span>
+          <div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2 group-hover:text-gold-600 transition-colors">"Walk the Talk"</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              We live and breathe the Balinese philosophy, participating in transformative rituals and sustainable journeys since our founding.
             </p>
           </div>
+        </div>
 
-          <div class="mt-10 flex items-center gap-4">
-            <div class="w-12 h-px bg-gold-500"></div>
-            <div>
-              <p class="font-serif text-lg text-stone-900">Bagus Jnana</p>
-              <p class="text-stone-500 text-xs uppercase tracking-[0.2em]">Founder & Private Concierge</p>
-            </div>
+        <!-- Item 2 -->
+        <div class="flex gap-6 group">
+          <span class="font-serif text-2xl text-gold-500 italic">02</span>
+          <div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2 group-hover:text-gold-600 transition-colors">Respect for Identity</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              We honor the unique identity of every village and temple we visit, linked by a common thread: Active Wellness, Top Quality Service, and Sustainability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex gap-6 group">
+          <span class="font-serif text-2xl text-gold-500 italic">03</span>
+          <div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2 group-hover:text-gold-600 transition-colors">Valuing Local Heritage</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              We prioritize the history of our sacred sites and the authenticity of each location, maximizing differentiation from commercial tourism.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="flex gap-6 group">
+          <span class="font-serif text-2xl text-gold-500 italic">04</span>
+          <div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2 group-hover:text-gold-600 transition-colors">Organic Resource Structure</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              We utilize an optimized and dynamic structure of local experts and premium assets to ensure a seamless flow.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5 - Centered on desktop -->
+        <div class="flex gap-6 group md:col-span-2 md:w-1/2 md:mx-auto">
+          <span class="font-serif text-2xl text-gold-500 italic">05</span>
+          <div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2 group-hover:text-gold-600 transition-colors">Fully Customized Activation</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              We activate fully personalized concierge and management services tailored to the seeker’s soul.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- The Three Pillars - Tri Loka -->
-  <section class="section-padding bg-stone-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-20 reveal">
-        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">The Three Cosmos</p>
-        <div class="divider divider-center mb-12"></div>
-        <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-6">
-          Guided by Ancient Wisdom
-        </h2>
-        <p class="text-stone-600 max-w-3xl mx-auto leading-relaxed">
-          Every journey with Bali Encore is guided by the ancient Balinese understanding of 
-          the universe—a harmony between Earth, Humanity, and the Divine. These three pillars 
-          are not tour categories. They are experiential foundations that help us design 
-          journeys aligned with who you are.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 reveal-stagger">
-        <!-- Pillar I - Bhur -->
-        <a href="/experiences#bhur" class="card-luxury group bg-stone-100 p-10 lg:p-12 border border-stone-200 hover:border-gold-400">
-          <div class="inline-block mb-6">
-            <span class="font-serif text-5xl text-gold-600 group-hover:text-gold-500 transition-colors">भूर्</span>
-          </div>
-          <p class="text-gold-600 text-xs uppercase tracking-widest mb-2">Pillar I — Bhur</p>
-          <h3 class="font-serif text-2xl text-stone-900 mb-4">The Untamed Archipelago</h3>
-          <p class="text-stone-500 text-sm uppercase tracking-wider mb-4">A Journey into the Earth</p>
-          <p class="text-stone-600 leading-relaxed mb-6">
-            For travelers who reconnect with life through nature, movement, and the raw elements 
-            of the island. Volcanic landscapes, sacred waters, forests, and coastal sanctuaries—
-            experienced consciously and responsibly.
-          </p>
-          <span class="text-gold-600 text-sm font-medium group-hover:text-gold-500 transition-colors">Explore Nature →</span>
-        </a>
-
-        <!-- Pillar II - Bwah -->
-        <a href="/experiences#bwah" class="card-luxury group bg-stone-100 p-10 lg:p-12 border border-stone-200 hover:border-gold-400">
-          <div class="inline-block mb-6">
-            <span class="font-serif text-5xl text-gold-600 group-hover:text-gold-500 transition-colors">भुवः</span>
-          </div>
-          <p class="text-gold-600 text-xs uppercase tracking-widest mb-2">Pillar II — Bwah</p>
-          <h3 class="font-serif text-2xl text-stone-900 mb-4">The Ancestral Trail</h3>
-          <p class="text-stone-500 text-sm uppercase tracking-wider mb-4">A Journey through Living Culture</p>
-          <p class="text-stone-600 leading-relaxed mb-6">
-            For those who seek to understand Bali as a living civilization, not a destination. 
-            Village life, ancestral traditions, royal heritage, and human stories passed 
-            through generations.
-          </p>
-          <span class="text-gold-600 text-sm font-medium group-hover:text-gold-500 transition-colors">Explore Culture →</span>
-        </a>
-
-        <!-- Pillar III - Swah -->
-        <a href="/experiences#swah" class="card-luxury group bg-stone-100 p-10 lg:p-12 border border-stone-200 hover:border-gold-400">
-          <div class="inline-block mb-6">
-            <span class="font-serif text-5xl text-gold-600 group-hover:text-gold-500 transition-colors">स्वः</span>
-          </div>
-          <p class="text-gold-600 text-xs uppercase tracking-widest mb-2">Pillar III — Swah</p>
-          <h3 class="font-serif text-2xl text-stone-900 mb-4">The Path of Awakening</h3>
-          <p class="text-stone-500 text-sm uppercase tracking-wider mb-4">A Journey into Inner Stillness</p>
-          <p class="text-stone-600 leading-relaxed mb-6">
-            For seekers ready to slow down, reflect, and reconnect with their inner balance. 
-            Sacred water rituals, spiritual guidance, and authentic wellness experiences 
-            rooted in Balinese wisdom.
-          </p>
-          <span class="text-gold-600 text-sm font-medium group-hover:text-gold-500 transition-colors">Explore Spirit →</span>
+      <div class="mt-16 text-center reveal">
+        <a href="/experiences" class="inline-flex items-center gap-3 px-8 py-4 border border-gold-500/30 hover:border-gold-500 text-gold-600 hover:text-gold-500 text-xs uppercase tracking-widest transition-all duration-300 hover:bg-gold-500/5">
+          <span>Explore Our Experiences</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- How We Work -->
-  <section class="section-padding bg-stone-900 text-stone-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-20 reveal">
-        <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">How Bali Encore Works</p>
-        <div class="divider divider-center mb-12"></div>
-        <h2 class="font-serif text-4xl md:text-5xl text-stone-50 mb-6">
-          No Two Journeys Are the Same
+  <!-- Sustainability & Responsibility - Minimal Card -->
+  <section class="py-24 bg-stone-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-white p-12 md:p-20 border border-stone-200 shadow-sm reveal text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gold-500"></div>
+        
+        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-8">Our Responsibility</p>
+        
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-8 leading-tight">
+          Sustainability Is Not a Trend<br/>
+          <span class="text-stone-400 italic">It Is a Responsibility</span>
         </h2>
-        <p class="text-stone-400 max-w-2xl mx-auto leading-relaxed">
-          Every itinerary is created exclusively for you.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal-stagger">
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full border border-gold-500 flex items-center justify-center mx-auto mb-6">
-            <span class="font-serif text-2xl text-gold-500">01</span>
-          </div>
-          <h3 class="font-serif text-xl text-stone-50 mb-3">We Listen</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">
-            We take time to understand your story, desires, and intentions.
-          </p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full border border-gold-500 flex items-center justify-center mx-auto mb-6">
-            <span class="font-serif text-2xl text-gold-500">02</span>
-          </div>
-          <h3 class="font-serif text-xl text-stone-50 mb-3">We Curate</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">
-            Your journey is designed around the three pillars that resonate most with you.
-          </p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full border border-gold-500 flex items-center justify-center mx-auto mb-6">
-            <span class="font-serif text-2xl text-gold-500">03</span>
-          </div>
-          <h3 class="font-serif text-xl text-stone-50 mb-3">We Align</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">
-            Experiences are carefully selected with respect for culture, nature, and community.
-          </p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full border border-gold-500 flex items-center justify-center mx-auto mb-6">
-            <span class="font-serif text-2xl text-gold-500">04</span>
-          </div>
-          <h3 class="font-serif text-xl text-stone-50 mb-3">We Deliver</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">
-            Seamless logistics, refined comfort, and responsible execution.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sustainability & Responsibility -->
-  <section class="section-padding bg-stone-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal">
-        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">Our Responsibility</p>
-        <div class="divider divider-center mb-12"></div>
-        <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-8">
-          Sustainability Is Not a Trend—It Is a Responsibility
-        </h2>
-        <p class="text-stone-600 max-w-3xl mx-auto leading-relaxed">
+        
+        <p class="text-stone-600 max-w-2xl mx-auto leading-relaxed mb-10">
           From plastic-free logistics and ethical partnerships to direct support for local 
           communities and cultural guardians, Bali Encore is committed to preserving what 
           makes Bali truly alive.
         </p>
+        
+        <a href="/sustainability" class="inline-block text-xs uppercase tracking-widest text-gold-600 hover:text-gold-500 border-b border-gold-600 hover:border-gold-500 pb-1 transition-colors">
+          Read Our Commitment
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Founder's Dharma — Cinematic Quote -->
-  <section class="relative py-32 md:py-48 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/images/culture/tirta-gangga.webp')] bg-cover bg-center bg-fixed"></div>
-    <div class="absolute inset-0 bg-stone-900/65"></div>
-    
-    <div class="relative z-10 px-8 md:px-16 lg:px-24">
-      <div class="max-w-4xl mx-auto text-center reveal">
-        <p class="text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-8">The Founder's Dharma</p>
-        <div class="w-12 h-px bg-gold-500 mx-auto mb-12"></div>
+  <!-- Founder's Dharma — Elegant Split Layout -->
+  <section class="py-24 md:py-32 bg-stone-900 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image Side -->
+        <div class="relative reveal-scale order-2 lg:order-1">
+          <div class="aspect-square lg:aspect-4/5 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1558005137-d9619a5c539f?auto=format&fit=crop&w=800&q=80" alt="Balinese Temple Architecture" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <!-- Decorative frame -->
+          <div class="absolute -bottom-4 -right-4 w-full h-full border border-gold-500/20 -z-10"></div>
+          <div class="absolute -top-4 -left-4 w-24 h-24 border-l border-t border-gold-500/40"></div>
+        </div>
         
-        <blockquote class="font-serif text-2xl md:text-4xl lg:text-5xl text-stone-50 leading-[1.25] mb-10">
-          "Growing up in Ubud, I learned that Bali's beauty isn't just in its landscapes, 
-          but in the balance we maintain every day."
-        </blockquote>
-        
-        <p class="text-stone-300/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-12">
-          When you journey with us, you are not just a visitor — you are a guest of my culture. 
-          Every ritual we share and every path we walk is done with respect, authenticity, 
-          and a commitment to our island's future.
-        </p>
-
-        <div class="flex items-center justify-center gap-4">
-          <div class="w-12 h-px bg-gold-500"></div>
-          <p class="font-serif text-lg text-gold-400">Bagus Jnana</p>
-          <div class="w-12 h-px bg-gold-500"></div>
+        <!-- Quote Side -->
+        <div class="reveal order-1 lg:order-2">
+          <div class="inline-flex items-center gap-4 mb-8">
+            <div class="w-12 h-px bg-gold-500"></div>
+            <p class="text-gold-500 text-[10px] uppercase tracking-[0.4em]">The Dharma</p>
+          </div>
+          
+          <blockquote class="font-serif text-2xl md:text-3xl lg:text-4xl text-stone-50 leading-relaxed mb-8">
+            "Bali's beauty isn't just in its landscapes, but in the balance we maintain every day."
+          </blockquote>
+          
+          <p class="text-stone-400 leading-relaxed mb-10">
+            When you journey with us, you are not just a visitor — you are a guest of our culture. 
+            Every ritual we share and every path we walk is done with respect, authenticity, 
+            and a commitment to our island's future.
+          </p>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-px bg-gold-500/50"></div>
+            <p class="font-serif text-lg text-gold-400 italic">Bagus Jnana</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Breathing space between dark sections -->
-  <section class="py-24 md:py-32 px-8 md:px-16 lg:px-24 bg-stone-50">
-    <div class="max-w-3xl mx-auto text-center reveal">
-      <p class="font-serif text-3xl md:text-4xl text-stone-900 leading-relaxed">
-        Every journey begins with a single 
+  <!-- Breathing space (Refined) -->
+  <section class="py-32 bg-stone-50 flex items-center justify-center">
+    <div class="reveal text-center">
+      <div class="w-px h-16 bg-gold-500/50 mx-auto mb-8"></div>
+      <p class="font-serif text-3xl md:text-4xl text-stone-800 leading-relaxed max-w-2xl px-6">
+        Every journey begins with a single<br/>
         <em class="text-gold-600">conversation</em>
       </p>
     </div>
   </section>
 
-  <!-- Final Call to Action -->
-  <section class="relative py-32 md:py-44 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/images/temples/gunung-kawi.webp')] bg-cover bg-center bg-fixed"></div>
-    <div class="absolute inset-0 bg-stone-900/70"></div>
+  <!-- Final Call to Action (Enhanced) -->
+  <section class="relative py-32 md:py-48 overflow-hidden">
+    <!-- Serene misty Bali landscape - matches "not to be rushed" theme -->
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?auto=format&fit=crop&w=2400&q=80')] bg-cover bg-center bg-fixed"></div>
+    <div class="absolute inset-0 bg-stone-900/60"></div>
     
-    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 reveal">
-      <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Ready to Design Your Encore?</p>
-      <div class="divider divider-center mb-12"></div>
-      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-50 mb-8 leading-tight">
-        Bali Is Not a Place to Be Rushed
+    <div class="relative z-10 max-w-5xl mx-auto text-center px-6 reveal">
+      <div class="w-px h-12 bg-gold-500/50 mx-auto mb-10"></div>
+      
+      <h2 class="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 mb-8 leading-none">
+        Bali Is Not a Place<br/><span class="text-gold-400 italic text-4xl md:text-5xl lg:text-6xl">to Be Rushed</span>
       </h2>
-      <p class="text-stone-300 text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+      <p class="text-stone-200 text-lg max-w-2xl mx-auto mb-14 leading-relaxed font-light">
         It is an island to be felt, understood, and respected. If you are ready to 
         experience Bali beyond the surface, we invite you to begin your encore.
       </p>
-      <a href="/begin" class="btn-luxury-outline">Design Your Bespoke Journey</a>
+      
+      <!-- Luxury button with gold accent -->
+      <a href="/begin" class="group relative inline-flex items-center gap-4 px-12 py-6 bg-transparent overflow-hidden">
+        <span class="absolute inset-0 border border-gold-500/60 group-hover:border-gold-400 transition-colors duration-500"></span>
+        <span class="absolute inset-0 bg-gold-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+        <span class="relative z-10 text-gold-400 group-hover:text-stone-900 text-xs uppercase tracking-[0.25em] font-medium transition-colors duration-500">Design Your Bespoke Journey</span>
+        <svg class="relative z-10 w-5 h-5 text-gold-400 group-hover:text-stone-900 group-hover:translate-x-1 transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
     </div>
   </section>
 </Layout>
@@ -480,6 +481,9 @@ import Layout from '../layouts/Layout.astro';
   }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // ===== HERO SLIDESHOW =====
@@ -528,5 +532,124 @@ import Layout from '../layouts/Layout.astro';
     }
 
     if (totalSlides > 0) startSlideshow();
+
+    // ===== GSAP SCROLL ANIMATIONS =====
+    // @ts-ignore
+    const gsap = window.gsap;
+    // @ts-ignore
+    const ScrollTrigger = window.ScrollTrigger;
+    
+    if (gsap && ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Animate all .reveal elements
+      gsap.utils.toArray('.reveal').forEach((el: Element) => {
+        gsap.fromTo(el, 
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      // Animate .reveal-scale elements (images)
+      gsap.utils.toArray('.reveal-scale').forEach((el: Element) => {
+        gsap.fromTo(el,
+          { opacity: 0, scale: 0.9 },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      // Staggered animations for grid items
+      gsap.utils.toArray('.reveal-stagger').forEach((container: Element) => {
+        const items = container.children;
+        gsap.fromTo(items,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: container,
+              start: 'top 80%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      // Parallax effect for section backgrounds
+      gsap.utils.toArray('section').forEach((section: Element) => {
+        const bg = section.querySelector('[class*="bg-cover"]');
+        if (bg && section.classList.contains('relative')) {
+          gsap.to(bg, {
+            yPercent: 20,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true
+            }
+          });
+        }
+      });
+
+      // Animate dividers
+      gsap.utils.toArray('.divider').forEach((el: Element) => {
+        gsap.fromTo(el,
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            duration: 1,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 90%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      // Text fade-in for prose sections
+      gsap.utils.toArray('.prose-luxury p').forEach((el: Element, i: number) => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 90%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+    }
   });
 </script>
