@@ -1,0 +1,690 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Bali & Islands Journey" description="A 10-night immersive journey blending culture, nature, beaches, and wellness across Bali and its stunning islands.">
+  <!-- Hero -->
+  <section class="relative h-[80vh] flex items-center justify-center bg-stone-900 overflow-hidden">
+    <div class="absolute inset-0 bg-linear-to-b from-stone-900/50 via-stone-900/30 to-stone-900/70 z-10"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2400&q=80')] bg-cover bg-center"></div>
+    
+    <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
+      <div class="hero-animate w-px h-16 bg-gold-500/50 mx-auto mb-8"></div>
+      <p class="hero-animate text-gold-400 text-[10px] uppercase tracking-[0.4em] mb-6">10 Nights • Island Experience</p>
+      <h1 class="hero-animate hero-animate-delay-1 font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 leading-tight mb-6">
+        Bali & Islands <span class="text-gold-400 italic">Journey</span>
+      </h1>
+      <p class="hero-animate hero-animate-delay-2 text-stone-300 text-lg max-w-xl mx-auto font-light">
+        Ubud → Sidemen → Nusa Lembongan → Nusa Dua
+      </p>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hero-animate hero-animate-delay-3">
+      <div class="w-px h-12 bg-gold-500/30 mx-auto animate-pulse"></div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="py-24 md:py-32 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <!-- Text Side -->
+        <div class="reveal">
+          <div class="inline-flex items-center gap-4 mb-8">
+            <div class="w-12 h-px bg-gold-500"></div>
+            <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em]">Journey Overview</p>
+          </div>
+          
+          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-8 leading-tight">
+            Culture, Nature & <span class="text-gold-600 italic">Islands</span>
+          </h2>
+          
+          <p class="text-xl text-stone-700 italic mb-6">
+            Beaches • Wellness • Premium Relaxation
+          </p>
+          
+          <div class="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              An immersive journey blending culture, nature, beaches, and wellness. 
+              Perfect for families: gentle, varied, and enriching activities.
+            </p>
+            <p>
+              A balanced mix of culture, nature, islands, and premium relaxation. 
+              Fluid rhythm, zero stress, harmonious transitions.
+            </p>
+          </div>
+          
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs uppercase tracking-wider">Ubud – 3 nights</span>
+            <span class="px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs uppercase tracking-wider">Sidemen – 2 nights</span>
+            <span class="px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs uppercase tracking-wider">Lembongan – 2 nights</span>
+            <span class="px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs uppercase tracking-wider">Nusa Dua – 3 nights</span>
+          </div>
+        </div>
+        
+        <!-- Image Side -->
+        <div class="relative reveal-scale">
+          <div class="relative aspect-4/5 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&w=800&q=80" alt="Tropical Island" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-full h-full border border-gold-500/30 -z-10"></div>
+          <div class="absolute -bottom-4 right-8 bg-stone-900 text-stone-50 px-6 py-4">
+            <p class="text-gold-400 text-[10px] uppercase tracking-widest mb-1">Experience</p>
+            <p class="font-serif text-lg">Island Hopping</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complementary Destinations -->
+  <section class="py-20 bg-stone-900 text-stone-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-gold-500 text-[10px] uppercase tracking-[0.4em] mb-6">The Journey</p>
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-50">Complementary Destinations</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+        <div class="text-center p-8 border border-stone-700 hover:border-gold-500/50 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold-500 text-2xl">🏛️</span>
+          </div>
+          <h4 class="font-serif text-xl text-stone-50 mb-2">Ubud</h4>
+          <p class="text-gold-500 text-xs uppercase tracking-wider mb-3">Culture</p>
+          <p class="text-stone-400 text-sm">Spirituality & craftsmanship</p>
+        </div>
+        <div class="text-center p-8 border border-stone-700 hover:border-gold-500/50 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold-500 text-2xl">🌾</span>
+          </div>
+          <h4 class="font-serif text-xl text-stone-50 mb-2">Sidemen</h4>
+          <p class="text-gold-500 text-xs uppercase tracking-wider mb-3">Nature & Authenticity</p>
+          <p class="text-stone-400 text-sm">Rural retreat & rice terraces</p>
+        </div>
+        <div class="text-center p-8 border border-stone-700 hover:border-gold-500/50 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold-500 text-2xl">🏝️</span>
+          </div>
+          <h4 class="font-serif text-xl text-stone-50 mb-2">Lembongan</h4>
+          <p class="text-gold-500 text-xs uppercase tracking-wider mb-3">Tropical Island</p>
+          <p class="text-stone-400 text-sm">Turquoise waters & beaches</p>
+        </div>
+        <div class="text-center p-8 border border-stone-700 hover:border-gold-500/50 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold-500 text-2xl">✨</span>
+          </div>
+          <h4 class="font-serif text-xl text-stone-50 mb-2">Nusa Dua</h4>
+          <p class="text-gold-500 text-xs uppercase tracking-wider mb-3">Luxury & Relaxation</p>
+          <p class="text-stone-400 text-sm">Elegant oceanfront finale</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day by Day Itinerary -->
+  <section class="py-24 md:py-32 bg-stone-50 overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-24 reveal">
+        <div class="inline-flex items-center gap-4 mb-8">
+          <div class="w-8 h-px bg-gold-500"></div>
+          <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em]">Day by Day</p>
+          <div class="w-8 h-px bg-gold-500"></div>
+        </div>
+        <h2 class="font-serif text-4xl md:text-5xl text-stone-900">Your Journey Unfolds</h2>
+      </div>
+
+      <div class="relative timeline-container">
+        <!-- Vertical Line -->
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gold-500/20 transform md:-translate-x-1/2 timeline-line origin-top"></div>
+
+        <!-- UBUD SECTION -->
+        <div class="relative mb-20 timeline-section">
+          <div class="flex items-center justify-center mb-12 relative z-10">
+            <div class="bg-stone-50 px-6 py-2 border border-gold-500/30 text-gold-600 text-xs uppercase tracking-widest rounded-full">
+              Ubud • Days 1-3
+            </div>
+          </div>
+
+          <!-- Day 1 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-gold-500 font-serif text-xl block mb-2">Day 1</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Arrival → Ubud</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Welcome to Bali! Your driver awaits to transfer you to your boutique jungle sanctuary. Settle in and let the island's energy embrace you.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Relax at the infinity pool</li>
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Explore the resort grounds</li>
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Welcome dinner with jungle views</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-12 md:col-start-2">
+              <span class="text-gold-500 font-serif text-xl block mb-2">Day 2</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Ubud Culture & Nature</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Discover the spiritual and natural highlights of north Ubud. A day of cleansing waters and lush green terraces.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm w-full">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <p class="text-stone-900 text-xs uppercase tracking-wider mb-3 pb-2 border-b border-stone-100">Morning</p>
+                    <ul class="text-stone-500 text-sm space-y-2">
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Tegalalang Terraces</li>
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Waterfall Swim</li>
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Temple Blessing</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="text-stone-900 text-xs uppercase tracking-wider mb-3 pb-2 border-b border-stone-100">Afternoon</p>
+                    <ul class="text-stone-500 text-sm space-y-2">
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Coffee Plantation</li>
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Pool Relaxation</li>
+                      <li class="flex gap-2"><span class="text-gold-500">→</span> Optional Spa</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="relative grid md:grid-cols-2 gap-8 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-gold-500 font-serif text-xl block mb-2">Day 3</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Village Immersion Day</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Connect with authentic Bali life through art and food. A gentle day of cultural immersion.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Rest & Breakfast at leisure</li>
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Balinese cooking or Batik class</li>
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Relaxing Spa session</li>
+                  <li class="flex gap-3"><span class="text-gold-500">•</span> Dinner in Ubud center</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEMEN SECTION -->
+        <div class="relative mb-20 timeline-section">
+          <div class="flex items-center justify-center mb-12 relative z-10">
+            <div class="bg-stone-50 px-6 py-2 border border-sage-500/30 text-sage-600 text-xs uppercase tracking-widest rounded-full">
+              Sidemen • Days 4-5
+            </div>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-sage-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-12 md:col-start-2">
+              <span class="text-sage-600 font-serif text-xl block mb-2">Day 4</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Ubud → Sidemen</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Journey into the "Old Bali" - a valley of untouched rice terraces and river streams.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Visit Goa Gajah (Elephant Cave)</li>
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Check-in to bamboo villa</li>
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Afternoon village walk</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="relative grid md:grid-cols-2 gap-8 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-sage-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-sage-600 font-serif text-xl block mb-2">Day 5</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Sidemen Nature</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Wake up to Mount Agung views. Explore the valley's secrets on foot or scooter.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Sunrise rice field trekking</li>
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Gembleng Waterfall dip</li>
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Traditional weaving workshop</li>
+                  <li class="flex gap-3"><span class="text-sage-500">•</span> Romantic river dinner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NUSA LEMBONGAN SECTION -->
+        <div class="relative mb-20 timeline-section">
+          <div class="flex items-center justify-center mb-12 relative z-10">
+            <div class="bg-stone-50 px-6 py-2 border border-blue-500/30 text-blue-600 text-xs uppercase tracking-widest rounded-full">
+              Nusa Lembongan • Days 6-7
+            </div>
+          </div>
+
+          <!-- Day 6 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-blue-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-12 md:col-start-2">
+              <span class="text-blue-600 font-serif text-xl block mb-2">Day 6</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Sidemen → Island Life</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Transfer to the harbor and sail to the turquoise waters of Nusa Lembongan. Island vibes await.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Fast boat transfer to Lembongan</li>
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Check-in to island villa</li>
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Sunset cocktails at Jungut Batu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 7 -->
+          <div class="relative grid md:grid-cols-2 gap-8 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-blue-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-blue-600 font-serif text-xl block mb-2">Day 7</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Tropical Exploration</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Explore the island's coastline, mangroves, and hidden beaches.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Snorkeling with tropical fish</li>
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Mangrove forest kayak tour</li>
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Devil's Tear & Dream Beach</li>
+                  <li class="flex gap-3"><span class="text-blue-500">•</span> Fresh seafood dinner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NUSA DUA SECTION -->
+        <div class="relative timeline-section">
+          <div class="flex items-center justify-center mb-12 relative z-10">
+            <div class="bg-stone-50 px-6 py-2 border border-amber-500/30 text-amber-600 text-xs uppercase tracking-widest rounded-full">
+              Nusa Dua • Days 8-11
+            </div>
+          </div>
+
+          <!-- Day 8 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-12 md:col-start-2">
+              <span class="text-amber-600 font-serif text-xl block mb-2">Day 8</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Island → Luxury Coast</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Return to the main island for a grand finale at Bali's most elegant beach enclave.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Boat back to Sanur/Serangan</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Check-in to 5-star beachfront resort</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Relax by the grand pools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 9 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-amber-600 font-serif text-xl block mb-2">Day 9</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Uluwatu Cliffs</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                A trip to the southern peninsula for dramatic cliffs, hidden beaches, and culture.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Melasti Beach relaxation</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Uluwatu Temple at sunset</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Kecak Fire Dance performance</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Jimbaran seafood dinner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 10 -->
+          <div class="relative grid md:grid-cols-2 gap-8 mb-16 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-12 md:col-start-2">
+              <span class="text-amber-600 font-serif text-xl block mb-2">Day 10</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Pure Indulgence</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                Your final full day. No agenda, just pure relaxation and pampering.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Signature Balinese Spa ritual</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Beachfront relaxation</li>
+                  <li class="flex gap-3"><span class="text-amber-500">•</span> Farewell gourmet dinner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 11 -->
+          <div class="relative grid md:grid-cols-2 gap-8 timeline-item">
+            <div class="hidden md:block"></div>
+            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-stone-400 rounded-full transform -translate-x-1.5 mt-6 border-4 border-stone-50 z-10 timeline-dot"></div>
+            <div class="pl-12 md:pl-0 md:pr-12 md:text-right md:col-start-1 md:row-start-1">
+              <span class="text-stone-500 font-serif text-xl block mb-2">Day 11</span>
+              <h3 class="font-serif text-2xl text-stone-900 mb-4">Departure</h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                A smooth transfer to the airport, refreshed and inspired.
+              </p>
+              <div class="bg-white p-6 border border-stone-100 shadow-sm inline-block text-left w-full">
+                <ul class="text-stone-500 text-sm space-y-2">
+                  <li class="flex gap-3"><span class="text-stone-400">•</span> Last breakfast & check-out</li>
+                  <li class="flex gap-3"><span class="text-stone-400">•</span> Private airport transfer</li>
+                  <li class="flex gap-3"><span class="text-stone-400">•</span> VIP departure assistance (optional)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Detail -->
+  <section class="py-24 md:py-32 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-4 mb-8">
+          <div class="w-8 h-px bg-gold-500"></div>
+          <p class="text-gold-600 text-[10px] uppercase tracking-[0.4em]">Premium Experiences</p>
+          <div class="w-8 h-px bg-gold-500"></div>
+        </div>
+        <h2 class="font-serif text-4xl md:text-5xl text-stone-900">What Awaits You</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-stagger">
+        <!-- Ubud -->
+        <div class="bg-white border border-stone-200 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Ubud" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6">
+              <h3 class="font-serif text-2xl text-white">Ubud</h3>
+              <p class="text-gold-400 text-xs uppercase tracking-wider">3 Nights • Cultural Heart</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-stone-600 text-sm mb-4">
+              The cultural heart of Bali, between jungle, spirituality, and craftsmanship. Stay in a boutique hotel amid rice terraces.
+            </p>
+            <h5 class="text-stone-700 text-xs uppercase tracking-wider mb-3">Premium Experiences</h5>
+            <ul class="text-stone-500 text-sm space-y-1">
+              <li>• Guided purification ceremony at sacred temple</li>
+              <li>• Tegalalang visit & Campuhan Ridge Walk</li>
+              <li>• "Art & Local Life" day: workshops</li>
+              <li>• Lunch in a traditional Balinese home</li>
+              <li>• Signature jungle massage</li>
+              <li>• North Ubud waterfall discovery</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidemen -->
+        <div class="bg-white border border-stone-200 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=80" alt="Sidemen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6">
+              <h3 class="font-serif text-2xl text-white">Sidemen</h3>
+              <p class="text-gold-400 text-xs uppercase tracking-wider">2 Nights • Elegant Retreat</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-stone-600 text-sm mb-4">
+              An elegant retreat in one of Bali's most preserved landscapes. Serene atmosphere, perfect for slowing down.
+            </p>
+            <h5 class="text-stone-700 text-xs uppercase tracking-wider mb-3">Premium Experiences</h5>
+            <ul class="text-stone-500 text-sm space-y-1">
+              <li>• Morning trek through rice terraces and villages</li>
+              <li>• Meet local farmers and discover plantations</li>
+              <li>• Village Balinese cooking class</li>
+              <li>• Visit Mother Temple Besakih or Tirta Gangga</li>
+              <li>• Open-air spa with rice terrace views</li>
+              <li>• Farm-to-table gourmet dinner</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nusa Lembongan -->
+        <div class="bg-white border border-stone-200 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80" alt="Nusa Lembongan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6">
+              <h3 class="font-serif text-2xl text-white">Nusa Lembongan</h3>
+              <p class="text-gold-400 text-xs uppercase tracking-wider">2 Nights • Tropical Island</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-stone-600 text-sm mb-4">
+              An intimate island with turquoise waters, bohemian ambiance, and golden beaches. Ideal for families: calm sea, accessible snorkeling.
+            </p>
+            <h5 class="text-stone-700 text-xs uppercase tracking-wider mb-3">Premium Experiences</h5>
+            <ul class="text-stone-500 text-sm space-y-1">
+              <li>• Snorkeling in crystal waters: corals, tropical fish</li>
+              <li>• Private tour: Dream Beach, Devil's Tear, Panorama Point</li>
+              <li>• Kayak or stand-up paddle in the mangrove</li>
+              <li>• Lunch feet in the sand at a chic local warung</li>
+              <li>• Seaside relaxation or elegant beach club</li>
+              <li>• Sunset from Jungut Batu or Mushroom Bay</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nusa Dua -->
+        <div class="bg-white border border-stone-200 overflow-hidden group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=800&q=80" alt="Nusa Dua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6">
+              <h3 class="font-serif text-2xl text-white">Nusa Dua</h3>
+              <p class="text-gold-400 text-xs uppercase tracking-wider">3 Nights • Elegant Finale</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-stone-600 text-sm mb-4">
+              Elegant oceanfront closure: luxury, calm, and comfort. Perfect to end the journey in absolute relaxation.
+            </p>
+            <h5 class="text-stone-700 text-xs uppercase tracking-wider mb-3">Premium Experiences</h5>
+            <ul class="text-stone-500 text-sm space-y-1">
+              <li>• Beach day in calm waters — ideal for children</li>
+              <li>• Signature Balinese spa at 5★ resort</li>
+              <li>• Paddle, kayak, or light snorkeling</li>
+              <li>• Uluwatu Temple excursion + Kecak sunset show</li>
+              <li>• Romantic beach dinner or Jimbaran seafood</li>
+              <li>• Free time: pool, gardens, or shopping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-32 md:py-48 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=80" alt="Tropical Island" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-stone-900/60"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto text-center px-6 reveal">
+      <div class="w-px h-12 bg-gold-500/50 mx-auto mb-10"></div>
+      
+      <h2 class="font-serif text-5xl md:text-6xl text-stone-50 mb-8 leading-none">
+        Ready to Explore<br/><span class="text-gold-400 italic">The Islands?</span>
+      </h2>
+      <p class="text-stone-200 text-lg max-w-2xl mx-auto mb-14 leading-relaxed font-light">
+        This journey is just an inspiration. Tell us your vision, and we'll 
+        create an island adventure uniquely yours.
+      </p>
+      
+      <a href="/begin" class="group relative inline-flex items-center gap-4 px-12 py-6 bg-transparent overflow-hidden">
+        <span class="absolute inset-0 border border-gold-500/60 group-hover:border-gold-400 transition-colors duration-500"></span>
+        <span class="absolute inset-0 bg-gold-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+        <span class="relative z-10 text-gold-400 group-hover:text-stone-900 text-xs uppercase tracking-[0.25em] font-medium transition-colors duration-500">Design Your Journey</span>
+        <svg class="relative z-10 w-5 h-5 text-gold-400 group-hover:text-stone-900 group-hover:translate-x-1 transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </section>
+
+<script>
+  function initJourneyAnimations() {
+    // @ts-ignore
+    const gsap = window.gsap;
+    // @ts-ignore
+    const ScrollTrigger = window.ScrollTrigger;
+    
+    if (!gsap || !ScrollTrigger) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Refresh ScrollTrigger to ensure positions are correct
+    ScrollTrigger.refresh();
+
+    // Elegant Hero Reveal
+    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    heroTl.fromTo('.hero-animate', 
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 1.2, stagger: 0.15 }
+    );
+
+    // Standard Reveal Elements
+    gsap.utils.toArray('.reveal').forEach((el: Element) => {
+      gsap.fromTo(el, 
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+
+    // Image Scale Reveal
+    gsap.utils.toArray('.reveal-scale').forEach((el: Element) => {
+      gsap.fromTo(el,
+        { opacity: 0, scale: 0.95 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+
+    // Staggered Grids
+    gsap.utils.toArray('.reveal-stagger').forEach((container: Element) => {
+      const items = container.children;
+      gsap.fromTo(items,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+
+    // Timeline Line Drawing & Day Reveal (if present)
+    const dayItems = document.querySelectorAll('[class*="border-l-2"]');
+    if (dayItems.length > 0) {
+      dayItems.forEach((item, index) => {
+        // Animate the content
+        gsap.fromTo(item,
+          { opacity: 0, x: -20 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            delay: 0.1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+        
+        // Animate the dot popping in
+        const dot = item.querySelector('.absolute.rounded-full');
+        if (dot) {
+          gsap.fromTo(dot,
+            { scale: 0, opacity: 0 },
+            {
+              scale: 1,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'back.out(1.7)',
+              scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+              }
+            }
+          );
+        }
+      });
+    }
+  }
+
+  // Run on load
+  document.addEventListener('DOMContentLoaded', initJourneyAnimations);
+  
+  // Run on Astro page navigation (if View Transitions used)
+  document.addEventListener('astro:page-load', initJourneyAnimations);
+</script>
+</Layout>

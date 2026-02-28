@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Contact Form -->
   <section class="section-padding bg-stone-100">
     <div class="max-w-3xl mx-auto">
-      <form class="space-y-10">
+      <form id="journeyForm" class="space-y-10">
         <!-- Personal Information -->
         <div class="bg-stone-50 p-8 md:p-12 border border-stone-200">
           <h2 class="font-serif text-2xl text-stone-900 mb-8">About You</h2>
@@ -263,3 +263,57 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('journeyForm');
+    
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const firstName = (document.getElementById('firstName') as HTMLInputElement)?.value || '';
+      const lastName = (document.getElementById('lastName') as HTMLInputElement)?.value || '';
+      const email = (document.getElementById('email') as HTMLInputElement)?.value || '';
+      const phone = (document.getElementById('phone') as HTMLInputElement)?.value || '';
+      const travelers = (document.getElementById('travelers') as HTMLSelectElement)?.value || '';
+      const duration = (document.getElementById('duration') as HTMLSelectElement)?.value || '';
+      const timing = (document.getElementById('timing') as HTMLInputElement)?.value || '';
+      const seeking = (document.getElementById('seeking') as HTMLTextAreaElement)?.value || '';
+      const transformation = (document.getElementById('transformation') as HTMLTextAreaElement)?.value || '';
+      const anything = (document.getElementById('anything') as HTMLTextAreaElement)?.value || '';
+      
+      const pillarsChecked = document.querySelectorAll('input[name="pillars"]:checked');
+      const pillars = Array.from(pillarsChecked).map((cb: Element) => (cb as HTMLInputElement).value).join(', ');
+      
+      const message = `*New Journey Inquiry from Bali Encore*
+
+*About the Traveler:*
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+
+*Journey Details:*
+Travelers: ${travelers || 'Not specified'}
+Duration: ${duration || 'Not specified'}
+Timing: ${timing || 'Not specified'}
+
+*Intentions:*
+Pillars: ${pillars || 'None selected'}
+
+What they're seeking:
+${seeking || 'Not provided'}
+
+Desired transformation:
+${transformation || 'Not provided'}
+
+Additional notes:
+${anything || 'None'}`;
+
+      const whatsappNumber = '62123456789';
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+    });
+  });
+</script>

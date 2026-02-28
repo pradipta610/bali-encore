@@ -1,0 +1,56 @@
+---
+interface Props {
+  heading?: string;
+  eyebrow?: string;
+  theme?: 'light' | 'dark';
+}
+
+const {
+  heading = 'Continue Exploring Bali Encore',
+  eyebrow = 'Navigate Our World',
+  theme = 'dark'
+}: Props = Astro.props;
+
+const isDark = theme === 'dark';
+const sectionClasses = isDark ? 'bg-stone-900 text-stone-50' : 'bg-stone-50 text-stone-900';
+const cardClasses = isDark
+  ? 'bg-stone-900/40 border-stone-800/60 hover:bg-stone-800'
+  : 'bg-white/80 border-stone-200 hover:bg-stone-100';
+const labelClasses = isDark ? 'text-stone-400' : 'text-stone-500';
+const titleClasses = isDark ? 'text-stone-50' : 'text-stone-900';
+const arrowClasses = isDark ? 'text-gold-400' : 'text-gold-600';
+
+const navLinks = [
+  { href: '/', label: 'Home', description: 'Return to the heart of Bali Encore.' },
+  { href: '/philosophy', label: 'About', description: 'Discover our ethos and philosophy.' },
+  { href: '/experiences', label: 'Experiences', description: 'Explore how we craft bespoke journeys.' },
+  { href: '/gallery', label: 'Gallery', description: 'Immerse in the visual poetry of Bali.' },
+  { href: '/sustainability', label: 'Sustainability', description: 'See how we care for the island.' },
+  { href: '/begin', label: 'Begin', description: 'Start a conversation with our design house.' }
+];
+---
+<section class={`section-padding ${sectionClasses}`}>
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-xs uppercase tracking-[0.3em] mb-4 text-gold-500">{eyebrow}</p>
+    <h2 class="font-serif text-4xl md:text-5xl {titleClasses} mb-6">{heading}</h2>
+    <p class={`max-w-3xl mx-auto text-base md:text-lg ${labelClasses}`}>
+      Let these primary portals guide you toward the facets of Bali Encore that resonate most in this moment.
+    </p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {navLinks.map((link) => (
+      <a href={link.href} class={`group border rounded-2xl px-6 py-5 text-left transition-all duration-300 ${cardClasses}`}>
+        <div class="flex items-center justify-between mb-3">
+          <h3 class={`font-serif text-2xl ${titleClasses}`}>{link.label}</h3>
+          <span class={`text-lg transition-transform group-hover:translate-x-1 ${arrowClasses}`}>
+            &rarr;
+          </span>
+        </div>
+        <p class={`${labelClasses} text-sm leading-relaxed`}>
+          {link.description}
+        </p>
+      </a>
+    ))}
+  </div>
+</section>

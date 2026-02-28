@@ -2,271 +2,391 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="The Bali Encore Journeys" description="Bespoke journeys across the Three Cosmos - Nature, Culture, and Spirit. Signature journey inspirations curated for the discerning traveler.">
-  <!-- Hero -->
-  <section class="relative h-[70vh] flex items-center justify-center bg-stone-900 overflow-hidden">
-    <div class="absolute inset-0 bg-linear-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80 z-10"></div>
-    <div class="absolute inset-0 bg-[url('/images/nature/banyumala-waterfall.webp')] bg-cover bg-center"></div>
+<Layout title="Journeys Through Bali" description="Experience the island beyond the ordinary. Discover Bali region by region — from sacred mountain villages to serene coastlines." stickyHeader={false}>
+
+  <!-- ==============================
+       1. HERO SECTION
+       ============================== -->
+  <section id="exp-hero" class="relative h-screen flex items-center justify-center bg-stone-950 overflow-hidden">
+    <!-- Premium darker overlay for text readability -->
+    <div class="exp-hero-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center will-change-transform" style="transform: scale(1.1);"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-stone-950/60 via-stone-950/40 to-stone-950/80 z-10"></div>
     
-    <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
-      <p class="hero-animate text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">The Bali Encore Journeys</p>
-      <h1 class="hero-animate hero-animate-delay-1 font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 leading-tight">
-        Bespoke Journeys Across<br/>the Three Cosmos
-      </h1>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="section-padding bg-stone-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal">
-        <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-6">Signature Journey Inspirations</p>
-        <div class="divider divider-center mb-12"></div>
-      </div>
-      <div class="prose-luxury reveal">
-        <p>
-          While every Bali Encore experience is uniquely designed for the individual, we have 
-          curated a series of Signature Journey Inspirations. These serve as a canvas for your 
-          imagination—starting points that showcase the depth of what we can create together.
+    <div class="relative z-20 text-center px-6 max-w-5xl mx-auto h-full flex flex-col justify-center">
+      <div class="hero-content space-y-8">
+        <p class="exp-hero-sub font-sans text-xs md:text-sm text-gold-400 tracking-[0.3em] uppercase opacity-0 translate-y-8">
+          The Island of the Gods
         </p>
-        <p>
-          Explore our themes below, and let us refine them into your personal masterpiece.
+        <h1 class="exp-hero-title font-serif text-6xl md:text-8xl lg:text-9xl text-stone-50 leading-[0.9] tracking-tight opacity-0 translate-y-8">
+          Journeys<br/><span class="italic text-gold-200">Through</span> Bali
+        </h1>
+        <div class="w-24 h-px bg-gold-500/50 mx-auto exp-hero-line opacity-0 scale-x-0"></div>
+        <p class="exp-hero-desc text-stone-300 text-lg md:text-xl font-serif italic max-w-2xl mx-auto leading-relaxed opacity-0 translate-y-8">
+          "Bali is a living culture shaped by devotion, nature, and balance. <br class="hidden md:block"/>Every region holds its own rhythm."
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pillar I: Bhur - The Untamed Archipelago -->
-  <section id="bhur" class="section-padding bg-stone-900 text-stone-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="relative h-125 reveal-scale image-reveal">
-          <div class="absolute inset-0 bg-[url('/images/adventure/forest-trek.webp')] bg-cover bg-center"></div>
-          <div class="absolute inset-0 bg-linear-to-t from-stone-900/60 to-transparent"></div>
-        </div>
-        
-        <div class="reveal">
-          <div class="inline-block mb-4">
-            <span class="font-serif text-4xl text-gold-500">भूर्</span>
-          </div>
-          <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-4">Pillar I — Bhur</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-stone-50 mb-2">The Untamed Archipelago</h2>
-          <p class="text-stone-400 text-sm uppercase tracking-wider mb-6">A Journey into the Earth</p>
-          <div class="divider mb-8"></div>
-          
-          <div class="space-y-6 text-stone-400 leading-relaxed">
-            <p class="text-xl text-stone-300 italic">
-              Before the temples and the palaces, there was the island—a landscape of fire, 
-              water, and ancient green.
-            </p>
-            
-            <p>
-              The Untamed Archipelago is designed for the active traveler who seeks to reconnect 
-              with the primal elements of the Earth. At Bali Encore, we view nature not as a 
-              backdrop for a photo, but as a living sanctuary.
-            </p>
-
-            <h3 class="font-serif text-xl text-stone-50 mt-8 mb-4">Signature Experiences</h3>
-            
-            <div class="space-y-4">
-              <div class="border-l-2 border-gold-500 pl-4">
-                <h4 class="text-stone-50 font-medium">Volcanic Expeditions</h4>
-                <p class="text-sm">Private, guided treks to Bali's sacred peaks at sunrise. We bypass the crowded tourist spots to lead you to secret ridges of Mount Batur or the hidden valleys of Munduk.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-500 pl-4">
-                <h4 class="text-stone-50 font-medium">Marine Conservation</h4>
-                <p class="text-sm">Luxury sailing and diving experiences focused on coral restoration. "Conscious Snorkeling" where we observe restoration projects and learn about Bali's marine ecosystem.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-500 pl-4">
-                <h4 class="text-stone-50 font-medium">Hidden Valleys</h4>
-                <p class="text-sm">Off-the-beaten-path jungle trekking and river adventures in the heart of Ubud.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-500 pl-4">
-                <h4 class="text-stone-50 font-medium">Regenerative Harvest</h4>
-                <p class="text-sm">Deep immersion into the UNESCO World Heritage Subak system. Walk through emerald terraces to meet local farmers practicing regenerative agriculture.</p>
-              </div>
-            </div>
-
-            <p class="text-sm text-gold-500 mt-6">
-              <strong>ESG Touch:</strong> Carbon-neutral transport, zero-waste expedition kits, and support for local reforestation projects.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pillar II: Bwah - The Ancestral Trail -->
-  <section id="bwah" class="section-padding bg-stone-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="order-2 lg:order-1 reveal">
-          <div class="inline-block mb-4">
-            <span class="font-serif text-4xl text-gold-600">भुवः</span>
-          </div>
-          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">Pillar II — Bwah</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-2">The Ancestral Trail</h2>
-          <p class="text-stone-500 text-sm uppercase tracking-wider mb-6">A Journey into the Middle World</p>
-          <div class="divider mb-8"></div>
-          
-          <div class="space-y-6 text-stone-600 leading-relaxed">
-            <p class="text-xl text-stone-700 italic">
-              History in Bali is not found in museums; it is found in the living breath 
-              of our villages and the hands of our artisans.
-            </p>
-            
-            <p>
-              The Ancestral Trail is an invitation to witness the dignity, the skill, and 
-              the ancient laws that still govern Balinese life today. We move away from 
-              the commercial routes to enter the private courts of royalty and the secret 
-              paths of the original Balinese people.
-            </p>
-
-            <h3 class="font-serif text-xl text-stone-900 mt-8 mb-4">Signature Experiences</h3>
-            
-            <div class="space-y-4">
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">The Spirit of the Aga</h4>
-                <p class="text-sm">A trek through pristine rice terraces, entering the ancient village of Tenganan through the "forest gate" to meet local guardians of the sacred double-ikat weaving.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">The Lake of Sacred Silence</h4>
-                <p class="text-sm">An immersion into the ancient rainforest of North Bali, crossing volcanic waters in hand-carved lesung canoes to discover hidden mist-shrouded temples at Tamblingan.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">Artisan Encounters</h4>
-                <p class="text-sm">Private sessions with master woodcarvers, weavers, and painters in their home studios.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">Culinary Heritage</h4>
-                <p class="text-sm">"Farm-to-Table" dining experiences in secret locations, featuring ancient Balinese recipes.</p>
-              </div>
-            </div>
-
-            <p class="text-sm text-gold-600 mt-6">
-              <strong>The Difference:</strong> Expert storytelling that decodes symbols and social structures. Direct economic support for village artisans.
-            </p>
-          </div>
-        </div>
-        
-        <div class="relative h-125 order-1 lg:order-2 reveal-scale image-reveal">
-          <div class="absolute inset-0 bg-[url('/images/culture/artisan-masks.webp')] bg-cover bg-center"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pillar III: Swah - The Path of Awakening -->
-  <section id="swah" class="section-padding bg-stone-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="relative h-125 reveal-scale image-reveal">
-          <div class="absolute inset-0 bg-[url('/images/temples/village-shrine.webp')] bg-cover bg-center"></div>
-        </div>
-        
-        <div class="reveal">
-          <div class="inline-block mb-4">
-            <span class="font-serif text-4xl text-gold-600">स्वः</span>
-          </div>
-          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">Pillar III — Swah</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-2">The Path of Awakening</h2>
-          <p class="text-stone-500 text-sm uppercase tracking-wider mb-6">A Journey into the Upper World</p>
-          <div class="divider mb-8"></div>
-          
-          <div class="space-y-6 text-stone-600 leading-relaxed">
-            <p class="text-xl text-stone-700 italic">
-              In the rush of the modern world, we often lose our rhythm. The Path of 
-              Awakening is a return to stillness.
-            </p>
-            
-            <p>
-              This journey is designed for the seeker who wishes to transition from a 
-              "tourist" to a "soul-traveler." By stripping away the commercial layers of 
-              modern wellness, we return to the core of Balinese spirituality—the realm 
-              where human consciousness meets the divine.
-            </p>
-
-            <h3 class="font-serif text-xl text-stone-900 mt-8 mb-4">Signature Experiences</h3>
-            
-            <div class="space-y-4">
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">Sacred Water Initiation</h4>
-                <p class="text-sm">A private Melukat purification at a hidden holy spring. We personally guide you through the philosophy of water and the intentional art of Balinese prayer.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">The Vibrational Reset</h4>
-                <p class="text-sm">Private sound-healing or meditative sessions led by authentic practitioners in secluded bamboo sanctuaries or temple courtyards.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">The Healer's Insight</h4>
-                <p class="text-sm">Optional consultations with authentic local Balian (healers) for traditional soul-readings and holistic wellness guidance.</p>
-              </div>
-              
-              <div class="border-l-2 border-gold-600 pl-4">
-                <h4 class="text-stone-900 font-medium">Ancestral Wisdom</h4>
-                <p class="text-sm">Philosophy talks on Balinese Hinduism and human consciousness with respected spiritual teachers.</p>
-              </div>
-            </div>
-
-            <p class="text-sm text-gold-600 mt-6">
-              <strong>The Result:</strong> A journey that leaves you transformed, not just rested. You leave Bali with renewed clarity and a soul truly "cleansed" by the authentic spirit of the island.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Weaving Together -->
-  <section class="section-padding bg-stone-900 text-stone-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="reveal">
-        <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">The Integration</p>
-        <div class="divider divider-center mb-12"></div>
-        <h2 class="font-serif text-4xl md:text-5xl text-stone-50 mb-12">
-          Your Journey, Your Combination
-        </h2>
       </div>
       
-      <div class="prose-luxury text-center text-stone-300 reveal">
-        <p>
-          You may choose one pillar as your dominant focus, or combine two or all three 
-          into a holistic journey. Whether you seek the adrenaline of Bhur, the wisdom 
-          of Bwah, or the stillness of Swah—we design around your intentions.
-        </p>
-        <p>
-          Together, these three realms create an experience that touches every dimension 
-          of being—physical, emotional, mental, spiritual. This is the alchemy of 
-          Bali Encore: not separate experiences, but an integrated journey toward wholeness.
-        </p>
+      <div class="absolute bottom-12 left-0 right-0 text-center exp-hero-scroll opacity-0">
+        <span class="text-[10px] uppercase tracking-widest text-stone-400">Scroll to Explore</span>
+        <div class="h-12 w-px bg-stone-500/30 mx-auto mt-4"></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="relative py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/images/wellness/jungle-pool.webp')] bg-cover bg-center bg-fixed"></div>
-    <div class="absolute inset-0 bg-stone-900/70"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 reveal">
-      <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Ready to Design Your Encore?</p>
-      <div class="divider divider-center mb-12"></div>
-      <h2 class="font-serif text-4xl md:text-5xl text-stone-50 mb-8">
-        The Earth Has a Rhythm
-      </h2>
-      <p class="text-stone-300 text-lg max-w-2xl mx-auto mb-12">
-        Let us help you find your pulse within it. Your journey to Bali starts 
-        with a conversation.
-      </p>
-      <a href="/begin" class="btn-luxury-outline">Design Your Journey</a>
+  <!-- ==============================
+       2. REGIONAL JOURNEY OPENING
+       ============================== -->
+  <section id="regions-intro" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-stone-950 py-24">
+    <!-- Background Texture -->
+    <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Text Content -->
+      <div class="order-2 lg:order-1 text-center lg:text-left">
+        <p class="region-intro-label text-gold-500 text-xs uppercase tracking-[0.3em] mb-6 opacity-0 translate-y-4">Our Regions</p>
+        <h2 class="region-intro-headline font-serif text-4xl md:text-6xl text-stone-50 leading-[1.1] mb-8 opacity-0 translate-y-6">
+          There’s no corner of Bali<br/>we haven’t explored.
+        </h2>
+        <div class="region-intro-text space-y-6 text-stone-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 opacity-0 translate-y-6">
+          <p>
+            From sacred mountain villages in the east to serene northern coastlines and vibrant southern shores, we know every rhythm of this island.
+          </p>
+          <p>
+            Each region tells a different story — and each journey begins with understanding the land.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3D Map Visual Placeholder -->
+      <div class="order-1 lg:order-2 flex justify-center items-center region-intro-visual opacity-0 scale-95">
+        <div class="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
+          <!-- Abstract Terrain "Map" using rice terrace texture -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-gold-900/20 to-stone-800/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div class="relative z-10 w-full h-full rounded-full overflow-hidden border border-white/5 shadow-2xl">
+            <div class="absolute inset-0 bg-stone-900/60 z-10 mix-blend-multiply"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=80" 
+              alt="Bali Terrain Map" 
+              class="w-full h-full object-cover grayscale contrast-125 opacity-60"
+            />
+            <!-- Overlay to make it look like a 3D sphere/map -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(12,10,9,0.4)_60%,#0c0a09_100%)] z-20"></div>
+            <!-- Glowing dots representing regions -->
+            <div class="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-gold-400 rounded-full shadow-[0_0_10px_2px_rgba(212,168,75,0.8)] z-30 transform -translate-x-4 -translate-y-8"></div>
+            <div class="absolute top-1/3 left-1/2 w-1 h-1 bg-white/50 rounded-full z-30 transform translate-x-8"></div>
+            <div class="absolute bottom-1/3 left-1/3 w-1 h-1 bg-white/50 rounded-full z-30"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- ==============================
+       3. REGIONAL STACKING SECTIONS (CLEAN REFERENCE STYLE)
+       ============================== -->
+  <div id="regions-stack" class="relative bg-stone-950 pb-24">
+    <div class="relative w-full max-w-[98%] mx-auto">
+      
+      <!-- UBUD -->
+      <section class="region-panel sticky top-0 z-10 h-screen w-full rounded-t-[3rem] overflow-hidden shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.8)] border-t border-white/10" data-region="ubud">
+        <div class="region-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <!-- Deep moody gradient for the "cleanest" look -->
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/80"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div class="region-content flex flex-col items-center">
+            <h2 class="font-sans font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-4 tracking-tight uppercase drop-shadow-2xl">
+              Ubud
+            </h2>
+            <p class="font-sans text-xs md:text-sm text-stone-300 tracking-[0.3em] uppercase mb-12 drop-shadow-lg font-medium">
+              Central Bali • Art & Spirit
+            </p>
+            
+            <a href="/destinations#ubud" class="group flex items-center gap-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-500 ease-out">
+              <span class="text-xs font-medium uppercase tracking-widest text-white pl-2">Explore</span>
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-stone-950 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- NORTH BALI -->
+      <section class="region-panel sticky top-0 z-20 h-screen w-full rounded-t-[3rem] overflow-hidden shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.8)] border-t border-white/10" data-region="north">
+        <div class="region-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/80"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div class="region-content flex flex-col items-center">
+            <h2 class="font-sans font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-4 tracking-tight uppercase drop-shadow-2xl">
+              North Bali
+            </h2>
+            <p class="font-sans text-xs md:text-sm text-stone-300 tracking-[0.3em] uppercase mb-12 drop-shadow-lg font-medium">
+              Lovina & Munduk • Untouched
+            </p>
+            
+            <a href="/destinations#north" class="group flex items-center gap-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-500 ease-out">
+              <span class="text-xs font-medium uppercase tracking-widest text-white pl-2">Discover</span>
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-stone-950 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EAST BALI -->
+      <section class="region-panel sticky top-0 z-30 h-screen w-full rounded-t-[3rem] overflow-hidden shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.8)] border-t border-white/10" data-region="east">
+        <div class="region-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/80"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div class="region-content flex flex-col items-center">
+            <h2 class="font-sans font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-4 tracking-tight uppercase drop-shadow-2xl">
+              East Bali
+            </h2>
+            <p class="font-sans text-xs md:text-sm text-stone-300 tracking-[0.3em] uppercase mb-12 drop-shadow-lg font-medium">
+              Sidemen & Amed • Heritage
+            </p>
+            
+            <a href="/destinations#east" class="group flex items-center gap-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-500 ease-out">
+              <span class="text-xs font-medium uppercase tracking-widest text-white pl-2">Experience</span>
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-stone-900 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOUTH BALI -->
+      <section class="region-panel sticky top-0 z-40 h-screen w-full rounded-t-[3rem] overflow-hidden shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.8)] border-t border-white/10" data-region="south">
+        <div class="region-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/80"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div class="region-content flex flex-col items-center">
+            <h2 class="font-sans font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-4 tracking-tight uppercase drop-shadow-2xl">
+              South Bali
+            </h2>
+            <p class="font-sans text-xs md:text-sm text-stone-300 tracking-[0.3em] uppercase mb-12 drop-shadow-lg font-medium">
+              Uluwatu & Canggu • Coastal
+            </p>
+            
+            <a href="/destinations#south" class="group flex items-center gap-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-500 ease-out">
+              <span class="text-xs font-medium uppercase tracking-widest text-white pl-2">Explore</span>
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-stone-900 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEST BALI -->
+      <section class="region-panel sticky top-0 z-50 h-screen w-full rounded-t-[3rem] overflow-hidden shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.8)] border-t border-white/10" data-region="west">
+        <div class="region-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/80"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div class="region-content flex flex-col items-center">
+            <h2 class="font-sans font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-4 tracking-tight uppercase drop-shadow-2xl">
+              West Bali
+            </h2>
+            <p class="font-sans text-xs md:text-sm text-stone-300 tracking-[0.3em] uppercase mb-12 drop-shadow-lg font-medium">
+              Menjangan & Pemuteran • Wild
+            </p>
+            
+            <a href="/destinations#west" class="group flex items-center gap-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-500 ease-out">
+              <span class="text-xs font-medium uppercase tracking-widest text-white pl-2">Discover</span>
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-stone-900 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ==============================
+       4. CULTURE & SUSTAINABILITY (Magazine Style)
+       ============================== -->
+  <section id="culture-section" class="relative bg-stone-50 py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-24 reveal">
+        <span class="text-gold-600 text-xs font-bold uppercase tracking-[0.3em]">Our Philosophy</span>
+        <h2 class="font-serif text-5xl md:text-7xl text-stone-900 mt-6">Living Heritage</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center">
+        <!-- Image Grid (Left) -->
+        <div class="lg:col-span-7 grid grid-cols-2 gap-4 md:gap-8">
+          <div class="space-y-4 md:space-y-8 mt-12">
+            <div class="aspect-[3/4] overflow-hidden rounded-sm reveal-scale">
+              <img src="https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&w=600&q=80" alt="Daily Offerings" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm reveal-scale">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Temple Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+            </div>
+          </div>
+          <div class="space-y-4 md:space-y-8">
+            <div class="aspect-square overflow-hidden rounded-sm reveal-scale">
+              <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" alt="Ceremony" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+            </div>
+            <div class="aspect-[3/4] overflow-hidden rounded-sm reveal-scale">
+              <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=600&q=80" alt="Water Palace" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Content (Right) -->
+        <div class="lg:col-span-5 lg:pl-16 relative">
+          <div class="absolute -top-12 -left-8 text-9xl font-serif text-stone-100 -z-10 leading-none select-none">
+            "
+          </div>
+          <blockquote class="font-serif text-3xl md:text-4xl text-stone-800 leading-tight mb-8 reveal">
+            Bali's traditions are not performances.<br/>They are lived daily.
+          </blockquote>
+          <div class="space-y-6 text-stone-600 text-lg leading-relaxed reveal-stagger">
+            <p>
+              Galungan and Kuningan celebrate the triumph of good over evil. Nyepi, the Day of Silence, brings the island into stillness. Offerings mark each morning with devotion.
+            </p>
+            <p>
+              Across the island, communities prioritise sustainability — from eco-conscious diving practices to preservation of ancient irrigation systems. Travel here is most meaningful when it respects harmony between people, nature, and the divine.
+            </p>
+          </div>
+          <div class="mt-12 reveal">
+            <a href="/sustainability" class="btn-primary-light border border-stone-200">Read Our Commitments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       5. FINAL CTA
+       ============================== -->
+  <section id="final-cta" class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-stone-900">
+    <div class="final-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center will-change-transform opacity-60" style="transform: scale(1.05);"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/50"></div>
+
+    <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
+      <h2 class="final-title font-serif text-5xl md:text-7xl lg:text-8xl text-stone-50 leading-[0.9] mb-8 opacity-0 translate-y-8">
+        Your Journey<br/>Starts Here
+      </h2>
+      <p class="final-sub text-stone-200 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-12 opacity-0 translate-y-8">
+        Every region carries its own story. Let us craft the one that becomes yours.
+      </p>
+      <div class="final-cta opacity-0 translate-y-8">
+        <a href="/begin" class="btn-primary bg-stone-50 text-stone-900 hover:bg-stone-200 border-none">Plan Your Experience</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       PAGE SCRIPT — GSAP Animations
+       ============================== -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', initExperiencesPage);
+    document.addEventListener('astro:page-load', initExperiencesPage);
+
+    function initExperiencesPage() {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Kill old triggers for this page
+      ScrollTrigger.getAll().forEach(t => {
+        if (t.vars && t.vars.id && t.vars.id.startsWith('exp-')) t.kill();
+      });
+
+      // ---------- HERO ----------
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      heroTl
+        .to('.exp-hero-sub', { opacity: 1, y: 0, duration: 1 }, 0.2)
+        .to('.exp-hero-title', { opacity: 1, y: 0, duration: 1.2 }, 0.4)
+        .to('.exp-hero-line', { opacity: 1, scaleX: 1, duration: 1 }, 0.6)
+        .to('.exp-hero-desc', { opacity: 1, y: 0, duration: 1 }, 0.8)
+        .to('.exp-hero-scroll', { opacity: 1, duration: 1 }, 1.0);
+
+      gsap.to('.exp-hero-bg', {
+        y: 100, // Parallax effect
+        scale: 1.15,
+        ease: 'none',
+        scrollTrigger: {
+          id: 'exp-hero-parallax',
+          trigger: '#exp-hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
+      // ---------- REGIONS INTRO ----------
+      const introTl = gsap.timeline({
+        scrollTrigger: {
+          id: 'exp-region-intro',
+          trigger: '#regions-intro',
+          start: 'top 70%',
+          end: 'top 20%',
+          scrub: false,
+          toggleActions: 'play none none none',
+        }
+      });
+      introTl
+        .to('.region-intro-label', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0)
+        .to('.region-intro-headline', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, 0.15)
+        .to('.region-intro-text', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, 0.35)
+        .to('.region-intro-visual', { opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out' }, 0.2);
+
+      // ---------- STACKING CARDS ----------
+      const panels = gsap.utils.toArray('.region-panel');
+      if (panels.length === 0) return;
+
+      panels.forEach((panel, i) => {
+        // Card Content Reveal - simple fade in without background animation
+        const content = panel.querySelector('.region-content');
+        if (content) {
+          gsap.set(content, { opacity: 1, y: 0 });
+        }
+      });
+
+      // ---------- FINAL CTA ----------
+      const finalTl = gsap.timeline({
+        scrollTrigger: {
+          id: 'exp-final',
+          trigger: '#final-cta',
+          start: 'top 60%',
+          toggleActions: 'play none none none',
+        }
+      });
+
+      finalTl
+        .to('.final-title', { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }, 0)
+        .to('.final-sub', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, 0.2)
+        .to('.final-cta', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.4);
+
+      gsap.to('.final-bg', {
+        scale: 1.15,
+        ease: 'none',
+        scrollTrigger: {
+          id: 'exp-final-bg',
+          trigger: '#final-cta',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+    }
+  </script>
 </Layout>

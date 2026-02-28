@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 
 const galleryImages = [
-  { src: '/images/nature/banyumala-waterfall.webp', alt: 'Banyumala Waterfall', category: 'nature' },
-  { src: '/images/nature/jungle-waterfall.webp', alt: 'Jungle Waterfall', category: 'nature' },
-  { src: '/images/nature/waterfall-couple.webp', alt: 'Waterfall Experience', category: 'nature' },
-  { src: '/images/nature/river-path.webp', alt: 'River Path', category: 'nature' },
-  { src: '/images/nature/rice-terrace.webp', alt: 'Rice Terrace', category: 'nature' },
-  { src: '/images/nature/landscape-01.webp', alt: 'Bali Landscape', category: 'nature' },
-  { src: '/images/nature/nature-scene.webp', alt: 'Nature Scene', category: 'nature' },
-  { src: '/images/nature/nature-06.webp', alt: 'Bali Nature', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80', alt: 'Bali Temple Gate', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=800&q=80', alt: 'Bali Temple', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=800&q=80', alt: 'Tegallalang Rice Terrace', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80', alt: 'Bali Waterfall', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=80', alt: 'Bali Landscape', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=80', alt: 'Uluwatu Temple', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80', alt: 'Bali Mountains', category: 'nature' },
+  { src: 'https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=800&q=80', alt: 'Bali Nature', category: 'nature' },
   { src: '/images/hero/lempuyang-gate.webp', alt: 'Lempuyang Gate', category: 'temples' },
   { src: '/images/temples/gunung-kawi.webp', alt: 'Gunung Kawi', category: 'temples' },
   { src: '/images/temples/temple-gate.webp', alt: 'Temple Gate', category: 'temples' },
@@ -26,14 +26,14 @@ const galleryImages = [
   { src: '/images/culture/culture-05.webp', alt: 'Cultural Experience', category: 'culture' },
   { src: '/images/culture/culture-06.webp', alt: 'Balinese Tradition', category: 'culture' },
   { src: '/images/culture/culture-13.webp', alt: 'Cultural Heritage', category: 'culture' },
-  { src: '/images/adventure/forest-trek.webp', alt: 'Forest Trek', category: 'adventure' },
-  { src: '/images/adventure/banyan-tree-walk.webp', alt: 'Banyan Tree Walk', category: 'adventure' },
-  { src: '/images/adventure/jungle-descent.webp', alt: 'Jungle Descent', category: 'adventure' },
-  { src: '/images/adventure/forest-walk.webp', alt: 'Forest Walk', category: 'adventure' },
-  { src: '/images/adventure/nature-trail.webp', alt: 'Nature Trail', category: 'adventure' },
-  { src: '/images/beach/uluwatu-beach.webp', alt: 'Uluwatu Beach', category: 'adventure' },
-  { src: '/images/beach/rocky-coast.webp', alt: 'Rocky Coast', category: 'adventure' },
-  { src: '/images/beach/beach-panorama.webp', alt: 'Beach Panorama', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&w=800&q=80', alt: 'Bali Jungle Trek', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1604922824961-87cefb2e4b07?auto=format&fit=crop&w=800&q=80', alt: 'Bali Temple Adventure', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=800&q=80', alt: 'Bali Coastal View', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?auto=format&fit=crop&w=800&q=80', alt: 'Bali Ocean Sunset', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=800&q=80', alt: 'Bali Beach', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1536152470836-b943b246224c?auto=format&fit=crop&w=800&q=80', alt: 'Bali Surfing', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=800&q=80', alt: 'Bali Cliff', category: 'adventure' },
+  { src: 'https://images.unsplash.com/photo-1570789210967-2cac24f86a9d?auto=format&fit=crop&w=800&q=80', alt: 'Bali Diving', category: 'adventure' },
 ];
 
 const natureImages = galleryImages.filter(img => img.category === 'nature');
@@ -72,41 +72,11 @@ const adventureImages = galleryImages.filter(img => img.category === 'adventure'
     </div>
   </div>
 
-  <!-- Video Lightbox Modal -->
-  <div id="video-lightbox" class="fixed inset-0 z-100 hidden bg-black/95 backdrop-blur-sm">
-    <button id="video-lightbox-close" class="absolute top-6 right-6 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Close">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-    
-    <button id="video-lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Previous">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-      </svg>
-    </button>
-    
-    <button id="video-lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors p-2" aria-label="Next">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </button>
-    
-    <div class="flex items-center justify-center w-full h-full p-4 md:p-12">
-      <video id="video-lightbox-player" class="max-w-full max-h-full" controls playsinline>
-        <source id="video-lightbox-source" src="" type="video/mp4">
-      </video>
-    </div>
-    
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-      <span id="video-lightbox-counter"></span>
-    </div>
-  </div>
 
   <!-- Hero -->
   <section class="relative h-[50vh] flex items-center justify-center bg-stone-900 overflow-hidden">
     <div class="absolute inset-0 bg-linear-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80 z-10"></div>
-    <div class="absolute inset-0 bg-[url('/images/hero/hero-landscape.webp')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
     
     <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
       <p class="hero-animate text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Visual Stories</p>
@@ -229,85 +199,10 @@ const adventureImages = galleryImages.filter(img => img.category === 'adventure'
     </div>
   </section>
 
-  <!-- Video Section -->
-  <section class="section-padding bg-stone-900 text-stone-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <p class="text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Moving Stories</p>
-        <div class="divider divider-center mb-12"></div>
-        <h2 class="font-serif text-3xl md:text-4xl text-stone-50 mb-6">
-          Video Moments
-        </h2>
-        <p class="text-stone-400 max-w-2xl mx-auto">
-          Experience the rhythm of Bali through our video collection—capturing the essence 
-          of authentic journeys across the island. Click to play.
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 reveal-stagger">
-        <button 
-          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
-          data-video-src="https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-02.MOV"
-          data-index="0"
-        >
-          <img src="/images/nature/banyumala-waterfall.webp" alt="Video 1" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button 
-          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
-          data-video-src="https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-07.MOV"
-          data-index="1"
-        >
-          <img src="/images/wellness/jungle-pool.webp" alt="Video 2" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button 
-          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
-          data-video-src="https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-03.MOV"
-          data-index="2"
-        >
-          <img src="/images/adventure/forest-trek.webp" alt="Video 3" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-        </button>
-        <button 
-          class="video-thumbnail aspect-video bg-stone-800 rounded-lg overflow-hidden relative group cursor-pointer border-0 p-0"
-          data-video-src="https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-05.MOV"
-          data-index="3"
-        >
-          <img src="/images/temples/gunung-kawi.webp" alt="Video 4" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-            <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-stone-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-    </div>
-  </section>
 
   <!-- CTA -->
   <section class="relative py-24 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/images/hero/hero-nature.webp')] bg-cover bg-center bg-fixed"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-fixed"></div>
     <div class="absolute inset-0 bg-stone-900/70"></div>
     
     <div class="relative z-10 max-w-4xl mx-auto text-center px-6 reveal">
@@ -362,23 +257,6 @@ const adventureImages = galleryImages.filter(img => img.category === 'adventure'
     transform: scale(1);
   }
 
-  #video-lightbox {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  #video-lightbox.active {
-    opacity: 1;
-  }
-
-  #video-lightbox-player {
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-  }
-
-  #video-lightbox.active #video-lightbox-player {
-    transform: scale(1);
-  }
 </style>
 
 <script>
@@ -460,88 +338,5 @@ const adventureImages = galleryImages.filter(img => img.category === 'adventure'
       }
     });
 
-    // Video Lightbox
-    const videoLightbox = document.getElementById('video-lightbox');
-    const videoPlayer = document.getElementById('video-lightbox-player') as HTMLVideoElement;
-    const videoSource = document.getElementById('video-lightbox-source') as HTMLSourceElement;
-    const videoLightboxClose = document.getElementById('video-lightbox-close');
-    const videoLightboxPrev = document.getElementById('video-lightbox-prev');
-    const videoLightboxNext = document.getElementById('video-lightbox-next');
-    const videoLightboxCounter = document.getElementById('video-lightbox-counter');
-    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
-    
-    const videoSources = [
-      'https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-02.MOV',
-      'https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-07.MOV',
-      'https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-03.MOV',
-      'https://tjgv3gmrfdzyapt2.public.blob.vercel-storage.com/video-05.MOV'
-    ];
-    let currentVideoIndex = 0;
-
-    function openVideoLightbox(index: number) {
-      currentVideoIndex = index;
-      updateVideoLightbox();
-      videoLightbox?.classList.remove('hidden');
-      setTimeout(() => videoLightbox?.classList.add('active'), 10);
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoLightbox() {
-      if (videoPlayer) {
-        videoPlayer.pause();
-      }
-      videoLightbox?.classList.remove('active');
-      setTimeout(() => {
-        videoLightbox?.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 300);
-    }
-
-    function updateVideoLightbox() {
-      if (videoSource && videoPlayer) {
-        videoSource.src = videoSources[currentVideoIndex];
-        videoPlayer.load();
-        videoPlayer.play();
-      }
-      if (videoLightboxCounter) {
-        videoLightboxCounter.textContent = `${currentVideoIndex + 1} / ${videoSources.length}`;
-      }
-    }
-
-    function nextVideo() {
-      if (videoPlayer) videoPlayer.pause();
-      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
-      updateVideoLightbox();
-    }
-
-    function prevVideo() {
-      if (videoPlayer) videoPlayer.pause();
-      currentVideoIndex = (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
-      updateVideoLightbox();
-    }
-
-    videoThumbnails.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        const index = parseInt(thumb.getAttribute('data-index') || '0');
-        openVideoLightbox(index);
-      });
-    });
-
-    videoLightboxClose?.addEventListener('click', closeVideoLightbox);
-    videoLightboxNext?.addEventListener('click', nextVideo);
-    videoLightboxPrev?.addEventListener('click', prevVideo);
-
-    videoLightbox?.addEventListener('click', (e) => {
-      if (e.target === videoLightbox) closeVideoLightbox();
-    });
-
-    // Update keyboard handler for both lightboxes
-    document.addEventListener('keydown', (e) => {
-      if (!videoLightbox?.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeVideoLightbox();
-        if (e.key === 'ArrowRight') nextVideo();
-        if (e.key === 'ArrowLeft') prevVideo();
-      }
-    });
   });
 </script>
