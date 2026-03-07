@@ -7,7 +7,7 @@ import NavLinkShowcase from '../components/NavLinkShowcase.astro';
   <!-- Hero -->
   <section class="relative h-[70vh] flex items-center justify-center bg-stone-900 overflow-hidden">
     <div class="absolute inset-0 bg-linear-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80 z-10"></div>
-    <div class="absolute inset-0 bg-[url('/images/hero/hero-landscape.webp')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1920&q=80&ixlib=rb-4.0.3')] bg-cover bg-center"></div>
     
     <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
       <p class="hero-animate text-gold-500 text-xs uppercase tracking-[0.3em] mb-6">Sacred Landscapes</p>
@@ -223,8 +223,75 @@ import NavLinkShowcase from '../components/NavLinkShowcase.astro';
     </div>
   </section>
 
+  <!-- South Bali -->
+  <section id="south-bali" class="section-padding bg-stone-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">The Vibrant</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-6">South Bali</h2>
+          <div class="divider mb-8"></div>
+          
+          <div class="space-y-6 text-stone-600 leading-relaxed">
+            <p class="text-lg italic text-stone-700">
+              Where dramatic clifftop temples meet world-renowned beaches and 
+              the pulse of contemporary Bali beats strongest.
+            </p>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">The Atmosphere</h3>
+              <p>
+                South Bali is where tradition and modernity dance together. From the 
+                sacred Uluwatu Temple perched on dramatic limestone cliffs to the 
+                sophisticated beach clubs of Seminyak, this region offers the full 
+                spectrum of Balinese experience. The energy here is dynamic, cosmopolitan, 
+                yet still deeply rooted in island spirituality.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Spiritual & Cultural Energy</h3>
+              <p>
+                Uluwatu Temple stands as a guardian of the island's southwestern tip, 
+                where Kecak fire dances unfold against sunset skies. The Bukit Peninsula 
+                holds hidden temples and sacred caves. Even amid the sophistication, 
+                daily offerings line every doorstep and ceremony processions pause traffic 
+                with beautiful regularity.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Adventure Element</h3>
+              <p>
+                Surf legendary breaks at Padang Padang and Bingin. Discover hidden 
+                beaches accessible only by steep cliff stairs. Experience world-class 
+                dining and nightlife. Explore the artistic enclaves of Canggu. The 
+                adventure here blends adrenaline with sophistication.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Emotional Benefit</h3>
+              <p>
+                South Bali offers the gift of vibrant living. Here, you experience 
+                Bali's ability to hold both the sacred and the celebratory, the 
+                ancient and the contemporary. You leave feeling fully alive and 
+                deeply connected to the island's dynamic spirit.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative h-150">
+          <div class="absolute inset-0 bg-[url('/images/beach/uluwatu-beach.webp')] bg-cover bg-center"></div>
+          <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-[url('/images/beach/coastal-view.webp')] bg-cover bg-center border-4 border-stone-50 hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- West Bali -->
-  <section id="west-bali" class="section-padding bg-stone-50">
+  <section id="west-bali" class="section-padding bg-stone-100">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -279,9 +346,141 @@ import NavLinkShowcase from '../components/NavLinkShowcase.astro';
           </div>
         </div>
         
+        <div class="relative h-150 order-2 lg:order-1">
+          <div class="absolute inset-0 bg-[url('/images/nature/nature-scene.webp')] bg-cover bg-center"></div>
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[url('/images/nature/river-path.webp')] bg-cover bg-center border-4 border-stone-50 hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nusa Penida -->
+  <section id="nusa-penida" class="section-padding bg-stone-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">The Dramatic</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-6">Nusa Penida</h2>
+          <div class="divider mb-8"></div>
+          
+          <div class="space-y-6 text-stone-600 leading-relaxed">
+            <p class="text-lg italic text-stone-700">
+              Where towering sea cliffs plunge into crystal waters and nature 
+              remains gloriously untamed and awe-inspiring.
+            </p>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">The Atmosphere</h3>
+              <p>
+                Nusa Penida is Bali's wild sister island—a rugged paradise where 
+                dramatic limestone cliffs meet pristine turquoise waters. The landscape 
+                here is raw and powerful, shaped by the relentless ocean. Roads wind 
+                through untouched terrain, revealing viewpoints that steal your breath 
+                and remind you of nature's magnificent scale.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Spiritual & Cultural Energy</h3>
+              <p>
+                The island holds deep spiritual significance for the Balinese, considered 
+                a place of purification and pilgrimage. Ancient temples perch on clifftops, 
+                their ceremonies witnessed by few. The local communities maintain traditions 
+                largely unchanged by tourism, offering glimpses into authentic island life.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Adventure Element</h3>
+              <p>
+                Swim with majestic manta rays at Manta Point. Trek to the iconic 
+                Kelingking Beach—the famous T-Rex cliff. Snorkel crystal-clear waters 
+                at Crystal Bay. Discover the natural infinity pool of Angel's Billabong. 
+                Every corner of this island rewards the adventurous spirit.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Emotional Benefit</h3>
+              <p>
+                Nusa Penida offers the gift of wonder. Standing before its dramatic 
+                landscapes, you feel small in the best possible way—connected to 
+                something vast and timeless. You leave with a renewed sense of 
+                adventure and appreciation for nature's artistry.
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <div class="relative h-150">
-          <div class="absolute inset-0 bg-[url('/images/beach/uluwatu-beach.webp')] bg-cover bg-center"></div>
-          <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-[url('/images/beach/rocky-coast.webp')] bg-cover bg-center border-4 border-stone-50 hidden lg:block"></div>
+          <div class="absolute inset-0 bg-[url('/images/beach/rocky-coast.webp')] bg-cover bg-center"></div>
+          <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-[url('/images/nature/nature-02.webp')] bg-cover bg-center border-4 border-stone-50 hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nusa Lembongan -->
+  <section id="nusa-lembongan" class="section-padding bg-stone-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative h-150 order-2 lg:order-1">
+          <div class="absolute inset-0 bg-[url('/images/beach/beach-panorama.webp')] bg-cover bg-center"></div>
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[url('/images/beach/beach-02.webp')] bg-cover bg-center border-4 border-stone-50 hidden lg:block"></div>
+        </div>
+        
+        <div class="order-1 lg:order-2">
+          <p class="text-gold-600 text-xs uppercase tracking-[0.3em] mb-4">The Serene</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-stone-900 mb-6">Nusa Lembongan</h2>
+          <div class="divider mb-8"></div>
+          
+          <div class="space-y-6 text-stone-600 leading-relaxed">
+            <p class="text-lg italic text-stone-700">
+              Where time slows to island pace, seaweed farmers tend turquoise 
+              shallows, and barefoot luxury meets authentic village charm.
+            </p>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">The Atmosphere</h3>
+              <p>
+                Nusa Lembongan is the gentle counterpart to Penida's drama—a small 
+                island paradise where scooters outnumber cars and the rhythm of life 
+                follows the tides. Sandy lanes wind past traditional seaweed farms, 
+                boutique resorts, and clifftop cafes. The atmosphere is relaxed, 
+                intimate, and genuinely welcoming.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Spiritual & Cultural Energy</h3>
+              <p>
+                Despite its small size, the island maintains strong spiritual traditions. 
+                Temple ceremonies punctuate the calendar, and the yellow bridge connecting 
+                to neighboring Nusa Ceningan has become a symbol of island connection. 
+                The seaweed farming culture represents a sustainable harmony with the sea.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Adventure Element</h3>
+              <p>
+                Surf the legendary breaks of Playgrounds and Lacerations. Kayak through 
+                mangrove forests at sunrise. Snorkel vibrant coral gardens. Cross the 
+                iconic yellow bridge to explore Nusa Ceningan's hidden beaches. Watch 
+                the sunset from Devil's Tear as waves explode against the rocks.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-serif text-xl text-stone-900 mb-2">Emotional Benefit</h3>
+              <p>
+                Nusa Lembongan offers the gift of simplicity. Here, the complications 
+                of modern life fade away, replaced by the simple pleasures of sun, 
+                sea, and genuine human connection. You leave feeling restored and 
+                reminded of what truly matters.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
